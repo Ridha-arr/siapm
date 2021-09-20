@@ -12,15 +12,12 @@ class Laporan extends Controller
       $data = collect();
       $laporans = ModelsLaporan::all()
     ->groupBy([function ($val) {
-      return Carbon::parse($val->created_at)->format('Y-m');},
-      function ($val) { return $val->user['area']; },
-      function ($val) { return $val->tipe; },
+      return Carbon::parse($val->created_at)->format('Y-m');}
     ]);
-     
       return response()->json(['data' => $laporans],200);
     }
-    public function getDateLaporan(){
-      return response()->json(ModelsLaporan::select(DB::raw('count(id) as upload'), DB::raw('count(verif) as verification'), DB::raw('YEAR(created_at) year, MONTH(created_at) month,dokumen'))->groupby('year','month','dokumen')->get());
+    public function getArea($tanggal){
+     
     }
     public function getAreaLaporan(){
       return response()->json(ModelsLaporan::select(DB::raw('count(id) as upload'), DB::raw('count(verif) as verification'), DB::raw('YEAR(created_at) year, MONTH(created_at) month,dokumen'))->with('user')->groupby('year','month','dokumen')->get());

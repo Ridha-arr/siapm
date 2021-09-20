@@ -20,4 +20,8 @@ class Laporan extends Model
     public function user(){
         return $this->belongsTo(User::class,'user_id','id');
     }
+    public function tanggal()
+    {
+        return $this->hasOne(Tanggals::class, 'id', 'laporan_id');
+    }
 }
