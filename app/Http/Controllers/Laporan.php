@@ -13,9 +13,7 @@ class Laporan extends Controller
       $date = collect();
     $data = collect();
 
-      $laporans = Tanggals::with(array('laporan' => function($query) {
-        $query->select(DB::raw("*"));
-    }))->select(DB::raw("tanggal"), DB::raw("DATE_FORMAT(tanggal, '%Y') year"), DB::raw("DATE_FORMAT(tanggal, '%m') months"),  DB::raw('MONTHNAME(tanggal) month'))->get()->groupBy(['year','months']);
+      $laporans = ModelsLaporan::select(DB::raw("date"), DB::raw("DATE_FORMAT(date, '%Y') year"), DB::raw("DATE_FORMAT(date, '%m') months"),  DB::raw('MONTHNAME(date) month'))->get()->groupBy(['year','months']);
       
       return response()->json($laporans,200);
     }
