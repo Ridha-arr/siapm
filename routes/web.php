@@ -20,3 +20,4 @@ Route::get('/', function () {
 Route::get('/laporan',[Laporan::class, 'getAllLaporan'])->name('laporanAll');
 Route::get('/laporan/date', [Laporan::class, 'getDateLaporan'])->name('dateLaporan');
 Route::get('/laporan/area', [Laporan::class, 'getAreaLaporan'])->name('areaLaporan');
+Route::post('/laporan/post', [Laporan::class,'uploadLaporan'])->name('upload');

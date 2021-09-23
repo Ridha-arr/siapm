@@ -7,8 +7,11 @@ use App\Models\Tanggals;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
+
 class Laporan extends Controller
 {
+  use Validator;
     public function getAllLaporan(){
       $date = collect();
     $data = collect();
@@ -17,10 +20,34 @@ class Laporan extends Controller
       
       return response()->json($laporans,200);
     }
-    public function getArea($tanggal){
-     
-    }
-    public function getAreaLaporan(){
-      return response()->json(ModelsLaporan::select(DB::raw('count(id) as upload'), DB::raw('count(verif) as verification'), DB::raw('YEAR(created_at) year, MONTH(created_at) month,dokumen'))->with('user')->groupby('year','month','dokumen')->get());
-    }
+    public function uploadLaporan(Request $request){
+    $validator = Validator::make(
+      $request->all(),
+      [
+        'user_id' => 'required',
+        'file' => 'required|mimes:doc,docx,pdf,txt|max:5048',
+        'area' => 'required',
+        'tipe' => 'required',
+      ]
+    );
+
+    if ($validator->fails()) {
+      return response()->json(['error' => $validator->errors()], 401);
+    }  
+      if ($files = $request->file('file')) {
+
+        $file = $request->file->store('public/pengadilan_negri/'.date('Y').'/'.date('m').'/'.date('d').'/'.'.'.$request->area.'/'.$request->tipe.'/'.$request->user.'/');
+
+        $document = new ModelsLaporan();
+        $document->dokumen = $file;
+        $document->user_id = $request->user_id;
+        $document->save();
+
+        return response()->json([
+          "success" => true,
+          "message" => "Berhasil Diupload",
+          "file" => $file
+        ]);
+      }
+  }
 }
