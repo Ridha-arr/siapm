@@ -7,11 +7,9 @@ use App\Models\Tanggals;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Validator;
 
 class Laporan extends Controller
 {
-  use Validator;
     public function getAllLaporan(){
       $date = collect();
     $data = collect();
@@ -21,15 +19,13 @@ class Laporan extends Controller
       return response()->json($laporans,200);
     }
     public function uploadLaporan(Request $request){
-    $validator = Validator::make(
-      $request->all(),
-      [
-        'user_id' => 'required',
-        'file' => 'required|mimes:doc,docx,pdf,txt|max:5048',
-        'area' => 'required',
-        'tipe' => 'required',
-      ]
-    );
+    $validator = $request->validate([
+      'user_id' => 'required',
+      'file' => 'required|mimes:doc,docx,pdf,txt|max:5048',
+      'area' => 'required',
+      'tipe' => 'required',
+    ]);
+   
 
     if ($validator->fails()) {
       return response()->json(['error' => $validator->errors()], 401);
