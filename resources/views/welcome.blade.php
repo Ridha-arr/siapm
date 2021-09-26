@@ -42,7 +42,7 @@
                 <!--Border 1-->
                 <div class="card h-100">
                     <div class="card-body1 py-4 rounded-3 h-100">
-                        <h5 id="card-title1">Informasi :</h5>
+                        <h5 id="card-title1">Informasi : </h5>
                         <p id="card-text1">Saran tentang SIAPM bisa ditujukan ke alamat email berikut : </p>
                         <p id="card-text2">it.pnbandaaceh@gmail.com </p>
                         </p>
