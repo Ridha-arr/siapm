@@ -52,7 +52,7 @@
       <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark shadow p-3 mb-5 float-start position-absolute" style="width: 280px; z-index: 999;">
         <div class="header-profil">
           <a href="#" class="d-flex align-items-center text-decoration-none" id="dropdownUser1" aria-expanded="false">
-            <img src="///d:/APM/FRONT END/Dashboard/img.jpeg" alt="" width="50" height="55" class="rounded-circle me-2">
+            <img src="{{asset('assets/img/img.jpeg')}}" alt="" width="50" height="55" class="rounded-circle me-2">
             <h6 id="nama-fs-4" >Misbah, S.T, M.Eng.</h6>
             <i class="bi-list" style="font-size: 1.5rem; color: #325135"></i>
             <p id="kategori">Admin</p>
