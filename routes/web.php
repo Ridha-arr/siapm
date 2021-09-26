@@ -3,6 +3,8 @@
 use App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Upload1;
 use App\Http\Controllers\Upload2;
+use App\Http\Controllers\Profil;
+use App\Http\Controllers\GantiProfil;
 use App\Http\Controllers\Laporan;
 use App\Http\Controllers\Login;
 use App\Http\Controllers\LoginApi;
@@ -35,3 +37,5 @@ Route::middleware('auth')->group(function () {
 
     });
 });
+Route::get('/profil', [Profil::class, 'index'])->name('profil');
+Route::get('/gantiprofil', [GantiProfil::class, 'index'])->name('gantiprofil');
