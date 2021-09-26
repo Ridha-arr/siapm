@@ -16,7 +16,7 @@ class LoginApi extends Controller
     public function login(Request $request)
     {
         $rules = [
-            'email'                 => 'required|email',
+            'email'                 => 'required|string',
             'password'              => 'required|string'
         ];
         $messages = [
