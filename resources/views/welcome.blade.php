@@ -85,12 +85,18 @@
                     <div class="card-body rounded-3 w-100">
                         <h5 id="card-title2">Selamat Datang</h5>
                         <p id="card-text3">Sistem Informasi Akreditasi Penjaminan Mutu</p>
-                        <form>
+                        <form method="POST" action="{{route('login')}}" >
+                          @csrf
                             <div class="mb-3 offset-lg-1 ">
                                 <label for="exampleInputEmail1" class="form-label1">Alamat Email</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1">
+                                <input type="email" class="form-control" name="email" id="exampleInputEmail1">
+                                @if (session()->has('message'))
+                                    <div class="w-100 text-center">
+                                      {{$message}}
+                                    </div>
+                                @endif
                                 <label for="exampleInputPassword1" class="form-label2">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1">
+                                <input type="password" name="password" class="form-control" id="exampleInputPassword1">
                                 <button type="submit" class="btn btn-success w-100 mt-4">Login</button>
                                 <div class="text-center">
                                     <p id="lupa-password">Lupa Password?</p>

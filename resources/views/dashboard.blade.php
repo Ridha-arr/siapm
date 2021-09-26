@@ -125,7 +125,7 @@
           </li>
           <!-->
           <li>
-            <a href="#" class="nav-link text-white">
+            <a href="{{route('logout')}}" class="nav-link text-white">
               <i class="bi-arrow-right-square-fill" style="font-size: 1.5rem; color: #325135"></i>
               <h6 id="logout">Logout</h6>
             </a>
