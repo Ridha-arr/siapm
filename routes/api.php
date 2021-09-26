@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Laporan as ControllersLaporan;
 use App\Http\Controllers\LoginApi;
 use App\Models\Laporan;
 use Illuminate\Http\Request;
@@ -21,4 +22,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 });
 Route::post('/loginapi', [LoginApi::class, 'login']);
-Route::get('/laporan', [Laporan::class, 'getAllLaporan']);
+Route::get('/laporan', [ControllersLaporan::class, 'getAllLaporan']);
