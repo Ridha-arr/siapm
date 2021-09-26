@@ -3,6 +3,8 @@
 use App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Upload1;
 use App\Http\Controllers\Upload2;
+use App\Http\Controllers\Profil;
+use App\Http\Controllers\GantiProfil;
 use App\Http\Controllers\Laporan;
 use Illuminate\Support\Facades\Route;
 
@@ -27,3 +29,5 @@ Route::post('/laporan/post', [Laporan::class,'uploadLaporan'])->name('upload');
 Route::get('/dashboard', [Dashboard::class, 'index'])->name('dashboard');
 Route::get('/upload1', [Upload1::class, 'index'])->name('upload1');
 Route::get('/upload2', [Upload2::class, 'index'])->name('upload2');
+Route::get('/profil', [Profil::class, 'index'])->name('profil');
+Route::get('/gantiprofil', [GantiProfil::class, 'index'])->name('gantiprofil');
