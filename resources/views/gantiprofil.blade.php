@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/styleu1.css') }}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/stylegp.css') }}" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <link href="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js">
 
     <title>Sistem Informasi Akreditasi Penjaminan Mutu</title>
   </head>
@@ -46,11 +48,11 @@
                 
             </div>
         </div>
-      <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark shadow p-3 mb-5 float-start position-absolute " style="width: 280px; z-index: 999;">
+      <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark shadow p-3 mb-5 float-start position-absolute" style="width: 280px; z-index: 999;">
         <div class="header-profil">
           <a href="#" class="d-flex align-items-center text-decoration-none" id="dropdownUser1" aria-expanded="false">
             <img src="{{ asset('assets/img/img.jpeg') }}" alt="" width="50" height="55" class="rounded-circle me-2">
-            <h6 id="nama-fs-4" >Misbah, S.T, M.Eng.</h6>
+            <h6 id="nama-fs-4" >Misbah, S.T, M.T.</h6>
             <i class="bi-list" style="font-size: 1.5rem; color: #325135"></i>
             <p id="kategori">Admin</p>
           </a>
@@ -66,7 +68,7 @@
             </a>
           </li>
           <li>
-            <a href="#" class="nav-link text-white">
+            <a href="#" class="nav-link active" aria-current="page" >  
               <i class="bi-person-fill" style="font-size: 1.5rem; color: #325135"></i>
               <h6 id="profil">Profil</h6>
             </a>
@@ -86,7 +88,7 @@
           </li>
           <li>
           <!-->
-            <a href="#" class="nav-link active" aria-current="page">
+            <a href="#" class="nav-link text-white">
               <i class="bi-file-arrow-up-fill" style="font-size: 1.5rem; color: #325135"></i>
               <h6 id="upload">Upload Data</h6>
             </a>
@@ -131,53 +133,68 @@
       </div>
       <!--Sidebar-->
       <!--Box periode-->
-      <div class="mx-1" style="margin-left: 14rem !important;">
-        <div class="container mt-4">
-          <div class=" ps-4">
-            <h1 class="w-100">Upload Data</h1>
-          </div>
-          <div class="card" style="width: 70rem; height: 30rem;">
-            <div class="card-body">
-              <h5 id="card-title">Periode Berkas</h5>
-              <div class="mb-3 row">
-                <label for="inputMonth" class="col-sm-2 col-form-label">Bulan/Tahun</label>
-                <div class="col-sm-5">
-                  <input type="month" class="form-control" id="inputMonth" />
-                </div>
-              </div>
-              <div class="mb-3 row">
-                <label for="inputSelection" class="col-sm-2 col-form-label">Area</label>
-                <div class="col-sm-5">
-                  <select class="form-select" aria-label=".form-select-example">
-                    <option selected>Pilih Area</option>
-                    <option value="1">KETUA</option>
-                    <option value="2">WAKIL</option>
-                    <option value="3">PANITERA</option>
-                    <option value="4">SEKRETARIS</option>
-                    <option value="5">HAKIM</option>
-                    <option value="6">PANMUD HUKUM</option>
-                    <option value="7">PANMUD PERDATA</option>
-                    <option value="8">JURUSITA</option>
-                    <option value="9">PANMUD PIDANA</option>
-                    <option value="10">PANITERA PENGGANTI</option>
-                    <option value="11">SUB.BAG KEPEGAWAIAN & ORTALA</option>
-                    <option value="12">SUB.BAG UMUM & KEUANGAN</option>
-                    <option value="13">SUB.BAG PTIP</option>
-                    <option value="14">PANMUD TIPIKOR</option>
-                    <option value="15">PANMUD PHI</option>
-                  </select>
-                </div>
-              </div>
-              <div class="mb-5 row">
-                <button type="button" class="btn btn-secondary">Buka</button>
-              </div>
+      <div class="mx-1" style="margin-left: 20rem !important;">
+          <div class="container mt-4">
+            <div class=" ps-5">
+              <h3 class="w-100">Profil</h3>
             </div>
-          </div>
-        </div>
-      </div>
+                <div class="card">
+                    <div class="card-body">
+                      <div class="w-100 align-center">
+                        <div class="mx-auto">
+                          <div class="mb-3 w-50 row mx-auto">
+                            <div class="card-title text-center">
+                              <img src="///d:/APM/FRONT END/Upload/Upload2/img.jpeg"  alt="" width="100" height="110" class="rounded-circle me-2 align-center">
+                            </div>
+                            <table class="table table-striped">
+                              <thead>
+                                <tr>
+                                  <th scope="col"></th>
+                                  <th scope="col"></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">Nama</th>
+                                  <td>Misbah, S.T., M.T.</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">NIP</th>
+                                  <td>1984xxxxxxxxxx</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">Kategori</th>
+                                  <td>Admin</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">Area</th>
+                                  <td>-</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">Email</th>
+                                  <td>masadmin@gmail.com</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">Status</th>
+                                  <td>Aktif</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <div class="mb-3 text-end">
+                                <button type="button" class="btn btn-secondary">
+                                  <i class="bi-pencil-fill" style="font-size: 1rem; color: #ffff"></i>
+                                  Edit
+                                </button>
+                            </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
       <!--Akhir Box Periode-->
-    </main>
-    <!--Akhir dari isi-->
+      </main>
+      <!--Akhir dari isi-->
   </body>
 </html>
 
