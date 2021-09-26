@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Laporan;
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +22,4 @@ Route::get('/laporan',[Laporan::class, 'getAllLaporan'])->name('laporanAll');
 Route::get('/laporan/date', [Laporan::class, 'getDateLaporan'])->name('dateLaporan');
 Route::get('/laporan/area', [Laporan::class, 'getAreaLaporan'])->name('areaLaporan');
 Route::post('/laporan/post', [Laporan::class,'uploadLaporan'])->name('upload');
+Route::get('/dashboard', [Dashboard::class, 'index'])->name('dashboard');
