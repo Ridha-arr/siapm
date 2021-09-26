@@ -25,5 +25,5 @@ Route::get('/laporan/date', [Laporan::class, 'getDateLaporan'])->name('dateLapor
 Route::get('/laporan/area', [Laporan::class, 'getAreaLaporan'])->name('areaLaporan');
 Route::post('/laporan/post', [Laporan::class,'uploadLaporan'])->name('upload');
 Route::get('/dashboard', [Dashboard::class, 'index'])->name('dashboard');
-Route::get('/dashboard', [Upload1::class, 'index'])->name('upload1');
-Route::get('/dashboard', [Upload2::class, 'index'])->name('upload2');
+Route::get('/upload1', [Upload1::class, 'index'])->name('upload1');
+Route::get('/upload2', [Upload2::class, 'index'])->name('upload2');
