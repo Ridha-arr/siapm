@@ -215,7 +215,7 @@
                 <div class="isi">
                     <div class="row p-2">
                         <div class="col-5">
-                            <img src="///d:/APM/FRONT END/Dashboard/gambar.png" alt="" width="300" height="200">
+                            <img src="{{asset('assets/img/gambar.png')}}" alt="" width="300" height="200">
                         </div>
                         <div class="col">
                             <h4 class="w-100" style="font-family: 'Poppins', sans-serif; font-weight: 600; color: #325135; margin-top: 1.5rem;">TENTANG SIAPM</h4>
@@ -230,7 +230,7 @@
                     <div class="row p-2">
                         <div class="col-5">
                             <video controls="true" autoplay="true" width="300" height="200">
-                                <source src="///d:/APM/FRONT END/Dashboard/MA.mp4"/>
+                                <source src="{{asset('assets/media/MA.mp4')}}"/>
                             </video>
                         </div>
                         <div class="col">
@@ -279,7 +279,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title" style="font-family: 'Poppins', sans-serif; font-weight: 500; color: #325135;">Cek Data</h5>
                                     <p class="card-text" style="font-family: 'Poppins', sans-serif; font-weight: 400; font-size: 15px; color:#325135; margin-top: 1rem; ">Cek Data dapat dilakukan oleh pengguna yang sudah terdaftar dan login ke aplikasi. Pengguna dapat melakukan pengecekan terhadap laporan yang sudah atau belum diupload</p>
-                                    <img src="///d:/APM/FRONT END/Dashboard/undraw_Done_re_oak4.svg" alt="" width="200" height="200" style="margin-top: 0rem;">    
+                                    <img src="{{asset('assets/img/undraw_Done_re_oak4.svg')}}" alt="" width="200" height="200" style="margin-top: 0rem;">    
                                 </div>
                             </div>
                         </div>
@@ -288,7 +288,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title" style="font-family: 'Poppins', sans-serif; font-weight: 500; color: #325135;">Upload Data</h5>
                                     <p class="card-text" style="font-family: 'Poppins', sans-serif; font-weight: 400; font-size: 15px; color:#325135; margin-top: 1rem; ">Pengguna yang sudah terdaftar dan login ke aplikasi dapat mengupload data berupa laporan sesuai kategori/ bidangnya masing-masing dalam bentuk pdf</p>
-                                    <img src="///d:/APM/FRONT END/Dashboard/undraw_add_document_re_mbjx.svg" alt="" width="200" height="200" style="margin-top: 1rem;">   
+                                    <img src="{{asset('assets/img/undraw_add_document_re_mbjx.svg')}}" alt="" width="200" height="200" style="margin-top: 1rem;">   
                                 </div>
                             </div>
                         </div>
@@ -301,7 +301,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title" style="font-family: 'Poppins', sans-serif; font-weight: 500; color: #325135;">Download Data</h5>
                                     <p class="card-text" style="font-family: 'Poppins', sans-serif; font-weight: 400; font-size: 15px; color:#325135; margin-top: 1rem; ">Download data yang dapat dilakukan oleh pengguna berupa download data laporan yang telah diupload dan LKE (Lembar Kerja Evaluasi) dalam bentuk pdf.</p>
-                                    <img src="///d:/APM/FRONT END/Dashboard/undraw_export_files_re_99ar.svg" alt="" width="200" height="200" style="margin-top: 1rem;">    
+                                    <img src="{{asset('assets/img/undraw_export_files_re_99ar.svg')}}" alt="" width="200" height="200" style="margin-top: 1rem;">    
                                 </div>
                             </div>
                         </div>
@@ -310,7 +310,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title" style="font-family: 'Poppins', sans-serif; font-weight: 500; color: #325135;">Cetak Laporan</h5>
                                     <p class="card-text" style="font-family: 'Poppins', sans-serif; font-weight: 400; font-size: 15px; color:#325135; margin-top: 1rem; ">Pengguna yang sudah terdaftar dan login ke aplikasi dapat mencetak data berupa hasil LKE  yang sudah di download </p>
-                                    <img src="///d:/APM/FRONT END/Dashboard/undraw_Receipt_re_fre3.svg" alt="" width="200" height="200" style="margin-top: 2rem;">   
+                                    <img src="{{asset('assets/img/undraw_Receipt_re_fre3.svg')}}" alt="" width="200" height="200" style="margin-top: 2rem;">   
                                 </div>
                             </div>
                         </div>
