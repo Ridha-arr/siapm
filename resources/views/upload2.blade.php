@@ -139,32 +139,31 @@
               <h1 class="w-100">Upload Data</h1>
             </div>
             <div class="card">
-              <div class="card-body">
+                <div class="card-body">
                 @foreach ($laporans as $laporan)
                 <h5 id="card-title" class="text-left">{{$laporan->name}}</h5>
                 <div class="w-100 align-center">
                   <div class="mx-auto">
                     @if (isset($laporan->keterangan))
                     @foreach ($laporan->keterangan as $keterangan)
-                    <div class="card" style="width: 60rem; margin-left: 0rem">
-                      <div class="card-body">
+                    <div class="card mb-4" style="margin-left: 0rem">
+                      <div class="card-body p-2">
                         <div class="mb-3">
-                          <div class="isi">
+                          <div class="isi p-2">
                             <form action="{{route('postUpload')}}" method="post" enctype="multipart/form-data">
                               @csrf
                               <input type="hidden" value="{{$laporan->id}}" name="tipe">
                               <input type="hidden" value="{{$keterangan->id}}" name="keterangan">
-                            <div class="row p-1">
-                              <div class="col-sm-5">
-                                <label for="formFile" class="form-label">{{$keterangan->name}}</label>
-                                <input class="form-control" type="file" name="file" id="formFile" style="width: min-content;">
+                                <span > {{$keterangan->name}}</span>
+                                <br>
+                                <br>
+                                <input accept="application/pdf" class="form-control" type="file" name="file" id="formFile" style="width: min-content;">
                               </div>
                               @if (isset($keterangan->laporan))
                               <div class="col">
                                 <a href="{{asset('storage/'.str_replace("public/", "",$keterangan->laporan->dokumen))}}" class="btn btn-secondary" style="width: 15rem; margin-top: 2rem; width: max-content; margin-inline-start: auto;">Pilih Dokumen Lama</a>
                               </div>
                               @endif
-                            </div>
                             @if (isset($keterangan->laporan))
                             <a href="{{asset('storage/'.str_replace("public/", "",$keterangan->laporan->dokumen))}}" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem;" target="_blank">
                               Lihat Dokumen </a>
@@ -180,14 +179,13 @@
                           </div>
                         </div>
                       </div>
-                    </div>
                     @endforeach
                     @endif
                   </div>
-                </div>
                 @endforeach
               </div>
-            </div>
+              </div>
+              </div>
           </div>      
       </div>
       <!--Akhir Box Periode-->

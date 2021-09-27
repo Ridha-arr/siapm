@@ -18,7 +18,6 @@ class CreateLaporansTable extends Migration
             $table->foreignId('user_id')->constrained();
             $table->string('dokumen');
             $table->string('name');
-            $table->foreignId('keterangan_id')->constrained();
             $table->boolean('verif');
             $table->timestamps();
         });
