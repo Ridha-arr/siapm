@@ -168,7 +168,8 @@
                             @if (isset($keterangan->laporan))
                             <a href="{{asset('storage/'.str_replace("public/", "",$keterangan->laporan->dokumen))}}" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem;" target="_blank">
                               Lihat Dokumen </a>
-                              @else
+                              @endif
+                              @if (isset($keterangan->laporan))
                             <button type="submit" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: min-content; margin-left: 0.3rem         ;">
                               Simpan </button>
                               </form>
