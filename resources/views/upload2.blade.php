@@ -146,7 +146,7 @@
                   <div class="mx-auto">
                     @if (isset($laporan->keterangan))
                     @foreach ($laporan->keterangan as $keterangan)
-                    <div class="card" style="width: 60rem; margin-left: 0rem">
+                    <div class="card mb-4" style="width: 60rem; margin-left: 0rem">
                       <div class="card-body">
                         <div class="mb-3">
                           <div class="isi">

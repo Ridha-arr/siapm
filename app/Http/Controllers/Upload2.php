@@ -11,7 +11,7 @@ class Upload2 extends Controller
     public function index(Request $request){
         $area = $request->area;
         $bulan = $request->bulan;
-        $laporans = Valid::where('area',$area)->get();
+        $laporans = Valid::with('keterangan')->where('area',$area)->get();
         return view("upload2",[
             'laporans'=> $laporans
         ]);
