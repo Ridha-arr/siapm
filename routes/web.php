@@ -32,6 +32,7 @@ Route::post('/laporan/post', [Laporan::class,'uploadLaporan'])->name('upload');
 Route::get('/dashboard', [Dashboard::class, 'index'])->name('dashboard');
 Route::get('/upload1', [Upload1::class, 'index'])->name('upload1');
 Route::get('/upload2', [Upload2::class, 'index'])->name('upload2');
+Route::post('/postUpload', [Upload2::class, 'postUpload'])->name('postUpload');
 Route::middleware('auth')->group(function () {
     Route::group(['middleware' => ['cek_login:admin']], function () {
 

@@ -140,33 +140,50 @@
             </div>
             <div class="card">
               <div class="card-body">
-                <h5 id="card-title" class="text-left">Nomor Surat</h5>
+                @foreach ($laporans as $laporan)
+                <h5 id="card-title" class="text-left">{{$laporan->name}}</h5>
                 <div class="w-100 align-center">
                   <div class="mx-auto">
+                    @foreach ($laporan->keterangan as $keterangan)
                     <div class="card" style="width: 60rem; margin-left: 0rem">
                       <div class="card-body">
                         <div class="mb-3">
                           <div class="isi">
+                            <form action="{{route('postUpload')}}" method="post" enctype="multipart/form-data">
+                              @csrf
+                              <input type="hidden" value="{{$laporan->id}}" name="tipe">
+                              <input type="hidden" value="{{$keterangan->id}}" name="keterangan">
                             <div class="row p-1">
                               <div class="col-sm-5">
-                                <label for="formFile" class="form-label">Nomor per isi</label>
-                                <input class="form-control" type="file" id="formFile" style="width: min-content;">
+                                <label for="formFile" class="form-label">{{$keterangan->name}}</label>
+                                <input class="form-control" type="file" name="file" id="formFile" style="width: min-content;">
                               </div>
+                              @if (isset($keterangan->laporan))
                               <div class="col">
-                                <button type="button" class="btn btn-secondary" style="width: 15rem; margin-top: 2rem; width: max-content; margin-inline-start: auto;">Pilih Dokumen Lama</button>
+                                <a href="{{asset('storage/'.str_replace("public/", "",$keterangan->laporan->dokumen))}}" class="btn btn-secondary" style="width: 15rem; margin-top: 2rem; width: max-content; margin-inline-start: auto;">Pilih Dokumen Lama</a>
                               </div>
+                              @endif
                             </div>
-                            
-                            <button type="button" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem         ;">
-                              Lihat Dokumen </button>
-                            <button type="button" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: min-content; margin-left: 0.3rem         ;">
+                            @if (isset($keterangan->laporan))
+                            <a href="{{asset('storage/'.str_replace("public/", "",$keterangan->laporan->dokumen))}}" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem;" target="_blank">
+                              Lihat Dokumen </a>
+                              @endif
+                              @if (isset($keterangan->laporan))
+                            <button type="submit" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: min-content; margin-left: 0.3rem         ;">
                               Simpan </button>
+                              </form>
+                              @else
+                              <button type="submit" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: min-content; margin-left: 0.3rem         ;">
+                              Upload </button>
+                              @endif
                           </div>
                         </div>
                       </div>
                     </div>
+                    @endforeach
                   </div>
                 </div>
+                @endforeach
               </div>
             </div>
           </div>      

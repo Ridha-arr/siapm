@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Keterangan extends Model
 {
     use HasFactory;
+    public function laporan()
+    {
+        return $this->hasOne(Laporan::class, 'keterangan_id', 'id');
+    }
 }

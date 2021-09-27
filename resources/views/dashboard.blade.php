@@ -89,7 +89,7 @@
           </li>
           <li>
           <!-->
-            <a href="#" class="nav-link text-white">
+            <a href="{{route('upload1')}}" class="nav-link text-white">
               <i class="bi-file-arrow-up-fill" style="font-size: 1.5rem; color: #325135"></i>
               <h6 id="upload">Upload Data</h6>
             </a>

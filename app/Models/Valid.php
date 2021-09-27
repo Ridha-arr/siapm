@@ -14,5 +14,7 @@ class Valid extends Model
         'tipe',
         'ketentuan'
     ];
-
+    public function keterangan(){
+        return $this->hasMany(Keterangan::class,'valid_id','id');
+    }
 }

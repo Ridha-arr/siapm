@@ -139,22 +139,23 @@
           <div class="card" style="width: 70rem; height: 30rem;">
             <div class="card-body">
               <h5 id="card-title">Periode Berkas</h5>
+              <form action="{{route('upload2')}}" method="get">
               <div class="mb-3 row">
                 <label for="inputMonth" class="col-sm-2 col-form-label">Bulan/Tahun</label>
                 <div class="col-sm-5">
-                  <input type="month" class="form-control" id="inputMonth" />
+                  <input type="month" name="bulan" class="form-control" id="inputMonth" />
                 </div>
               </div>
               <div class="mb-3 row">
                 <label for="inputSelection" class="col-sm-2 col-form-label">Area</label>
                 <div class="col-sm-5">
-                  <select class="form-select" aria-label=".form-select-example">
+                  <select class="form-select" name="area" aria-label=".form-select-example">
                     <option selected>Pilih Area</option>
-                    <option value="1">KETUA</option>
-                    <option value="2">WAKIL</option>
-                    <option value="3">PANITERA</option>
-                    <option value="4">SEKRETARIS</option>
-                    <option value="5">HAKIM</option>
+                    <option value="ketua">KETUA</option>
+                    <option value="wakil">WAKIL</option>
+                    <option value="panitera">PANITERA</option>
+                    <option value="sekretaris">SEKRETARIS</option>
+                    <option value="hakim">HAKIM</option>
                     <option value="6">PANMUD HUKUM</option>
                     <option value="7">PANMUD PERDATA</option>
                     <option value="8">JURUSITA</option>
@@ -169,8 +170,9 @@
                 </div>
               </div>
               <div class="mb-5 row">
-                <button type="button" class="btn btn-secondary">Buka</button>
+                <button type="submit" class="btn btn-secondary">Buka</button>
               </div>
+              </form>
             </div>
           </div>
         </div>

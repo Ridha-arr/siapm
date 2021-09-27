@@ -14,7 +14,7 @@ class Laporan extends Model
         'user_id',
         'dokumen',
         'name',
-        'tipe',
+        'keterangan_id',
         'verif'
     ];
     public function user(){

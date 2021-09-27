@@ -14,7 +14,6 @@ class AddNameToValids extends Migration
     public function up()
     {
         Schema::table('valids', function (Blueprint $table) {
-            $table->string("name")->nullable();
         });
     }
 
