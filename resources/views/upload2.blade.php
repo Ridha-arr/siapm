@@ -144,6 +144,7 @@
                 <h5 id="card-title" class="text-left">{{$laporan->name}}</h5>
                 <div class="w-100 align-center">
                   <div class="mx-auto">
+                    @if (isset($laporan->keterangan))
                     @foreach ($laporan->keterangan as $keterangan)
                     <div class="card" style="width: 60rem; margin-left: 0rem">
                       <div class="card-body">
@@ -181,6 +182,7 @@
                       </div>
                     </div>
                     @endforeach
+                    @endif
                   </div>
                 </div>
                 @endforeach
