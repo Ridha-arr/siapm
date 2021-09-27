@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Laporan;
 use App\Models\Valid;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class Upload2 extends Controller
 {
@@ -26,6 +27,17 @@ class Upload2 extends Controller
             'verif'=>0,
             'keterangan_id'=>$request->keterangan
         ]);
+        return back();
+    }
+    public function update(Request $request){
+        $laporan = Laporan::find($request->update);
+        $file_path = storage_path('app/public/' . $request->file);
+        if (File::exists($file_path)) File::delete($file_path);
+        $fileName = $request->file->store('public/pengadilan_negri/' . date('Y') . '/' . date('m') . '/' . auth()->user()->area . '/' . $request->tipe);
+        $oriName = $request->file->getClientOriginalName();
+        $laporan->dokumen = $fileName;
+        $laporan->name = $oriName;
+        $laporan->save();
         return back();
     }
 }

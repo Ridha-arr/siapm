@@ -150,7 +150,7 @@
                 <label for="inputSelection" class="col-sm-2 col-form-label">Area</label>
                 <div class="col-sm-5">
                   <select class="form-select" name="area" aria-label=".form-select-example">
-                    <option selected>Pilih Area</option>
+                    <option value="" disabled selected>Pilih Area</option>
                     <option value="ketua">KETUA</option>
                     <option value="wakil">WAKIL</option>
                     <option value="panitera">PANITERA</option>
