@@ -150,7 +150,11 @@
                       <div class="card-body">
                         <div class="mb-3">
                           <div class="isi">
+                            @if (isset($keterangan->laporan))
+                            <form action="{{route('update')}}" method="post" enctype="multipart/form-data">
+                              @else
                             <form action="{{route('postUpload')}}" method="post" enctype="multipart/form-data">
+                              @endif
                               @csrf
                               <input type="hidden" value="{{$laporan->id}}" name="tipe">
                               <input type="hidden" value="{{$keterangan->id}}" name="keterangan">
@@ -170,13 +174,14 @@
                               Lihat Dokumen </a>
                               @endif
                               @if (isset($keterangan->laporan))
+                              <input type="hidden" value="{{$keterangan->laporan->id}}" name="update">
                             <button type="submit" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: min-content; margin-left: 0.3rem         ;">
                               Simpan </button>
-                              </form>
                               @else
                               <button type="submit" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: min-content; margin-left: 0.3rem         ;">
                               Upload </button>
                               @endif
+                              </form>
                           </div>
                         </div>
                       </div>

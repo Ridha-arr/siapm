@@ -33,6 +33,7 @@ Route::get('/dashboard', [Dashboard::class, 'index'])->name('dashboard');
 Route::get('/upload1', [Upload1::class, 'index'])->name('upload1');
 Route::get('/upload2', [Upload2::class, 'index'])->name('upload2');
 Route::post('/postUpload', [Upload2::class, 'postUpload'])->name('postUpload');
+Route::post('/update', [Upload2::class, 'update'])->name('update');
 Route::middleware('auth')->group(function () {
     Route::group(['middleware' => ['cek_login:admin']], function () {
 
