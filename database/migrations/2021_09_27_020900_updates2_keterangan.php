@@ -14,7 +14,7 @@ class Updates2Keterangan extends Migration
     public function up()
     {
         Schema::table('keterangans', function (Blueprint $table) {
-            $table->foreignId("valid_id")->constrained()->change();
+      
             //
         });
     }

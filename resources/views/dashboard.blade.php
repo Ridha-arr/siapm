@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style2.css')}}" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
     <link href="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js">
-    <script type="text/javascript" src="chartjs/Chart.js"></script>
+    <script type="text/javascript" src= "{{asset('assets/js/Chart.js')}}"></script>
 
     <title>Sistem Informasi Akreditasi Penjaminan Mutu</title>
   </head>

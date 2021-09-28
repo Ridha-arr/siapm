@@ -156,16 +156,16 @@
                     <option value="panitera">PANITERA</option>
                     <option value="sekretaris">SEKRETARIS</option>
                     <option value="hakim">HAKIM</option>
-                    <option value="6">PANMUD HUKUM</option>
-                    <option value="7">PANMUD PERDATA</option>
-                    <option value="8">JURUSITA</option>
-                    <option value="9">PANMUD PIDANA</option>
-                    <option value="10">PANITERA PENGGANTI</option>
-                    <option value="11">SUB.BAG KEPEGAWAIAN & ORTALA</option>
-                    <option value="12">SUB.BAG UMUM & KEUANGAN</option>
-                    <option value="13">SUB.BAG PTIP</option>
-                    <option value="14">PANMUD TIPIKOR</option>
-                    <option value="15">PANMUD PHI</option>
+                    <option value="panmud hukum">PANMUD HUKUM</option>
+                    <option value="panmud perdata">PANMUD PERDATA</option>
+                    <option value="jurusita">JURUSITA</option>
+                    <option value="panmud pidana">PANMUD PIDANA</option>
+                    <option value="panitera pengganti">PANITERA PENGGANTI</option>
+                    <option value="sub.bag kepegawaian & ortala">SUB.BAG KEPEGAWAIAN & ORTALA</option>
+                    <option value="sub.bag umum & keuangan">SUB.BAG UMUM & KEUANGAN</option>
+                    <option value="sub.bag ptip">SUB.BAG PTIP</option>
+                    <option value="panmud tipikor">PANMUD TIPIKOR</option>
+                    <option value="panmud phi">PANMUD PHI</option>
                   </select>
                 </div>
               </div>

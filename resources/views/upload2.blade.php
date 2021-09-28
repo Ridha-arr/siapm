@@ -141,12 +141,12 @@
             <div class="card">
                 <div class="card-body">
                 @foreach ($laporans as $laporan)
-                <h5 id="card-title" class="text-left">{{$laporan->name}}</h5>
+                <h5 id="card-title" class="text-left mt-2">{{$laporan->name}}</h5>
                 <div class="w-100 align-center">
                   <div class="mx-auto">
                     @if (isset($laporan->keterangan))
                     @foreach ($laporan->keterangan as $keterangan)
-                    <div class="card mb-4" style="width: 60rem; margin-left: 0rem">
+                    <div class="card mb-4" style="margin-left: 0rem">
                       <div class="card-body">
                         <div class="mb-3">
                           <div class="isi">
