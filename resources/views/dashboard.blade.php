@@ -18,6 +18,7 @@
   <body>
     <!-- Buat Navbar Atas-->
     <!-- Gambar Logo dan Tulisan-->
+    <div class="fixed-top">
     <nav class="navbar navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-gambar"> <img src="{{asset('assets/img/warna.png')}}"alt="Logo" width="120" height="150" /> </a>
@@ -28,6 +29,7 @@
         </div>
       </div>
     </nav>
+    </div>
     <!-- Akhir Gambar Logo dan Tulisan-->
     <!-- Akhir Navbar-->
 
@@ -49,7 +51,8 @@
                 
             </div>
         </div>
-      <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark shadow p-3 mb-5 float-start position-absolute" style="width: 280px; z-index: 999;">
+    <div class="sticky-top">
+      <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark shadow p-3 mb-5 float-start position-absolute " style="width: 280px; z-index: 999; margin-top:11rem">
         <div class="header-profil">
           <a href="#" class="d-flex align-items-center text-decoration-none" id="dropdownUser1" aria-expanded="false">
             <img src="{{asset('assets/img/img.jpeg')}}" alt="" width="50" height="55" class="rounded-circle me-2">
@@ -132,9 +135,10 @@
           </li>
         </ul>
       </div>
+    </div>
       <!--Sidebar-->
       <!--Box periode-->
-      <div class="mx-1" style="margin-left: 20rem !important;">
+      <div class="mx-1" style="margin-left: 20rem !important; margin-top: 13rem">
           <div class="container mt-4">
             <div class=" ps-5">
                 <h5 class="w-100" style="font-family: 'Poppins', sans-serif; font-weight: 400; color: #325135; margin-top: 1.5rem;">Dashboard</h5>

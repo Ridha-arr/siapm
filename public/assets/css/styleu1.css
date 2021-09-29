@@ -36,7 +36,7 @@ h5 {
 .bi-list::before {
     vertical-align: top !important;
     margin-top: -2rem !important;
-    margin-left: 2rem !important;
+    margin-left: 1rem !important;
 }
 
 #nama-fs-4 {
@@ -50,7 +50,7 @@ h5 {
     font-weight: 400;
     color: #325135;
     margin-top: 3.5rem;
-    margin-inline-start: -11.8rem;
+    margin-inline-start: -13rem;
 }
 
 #garis1 {
