@@ -45,100 +45,15 @@
     <i class="bi-arrow-right-square-fill" style="font-size: 2rem; color: #325135"></i>
     -->
     <!--Sidebar-->
+    <x-sidebar></x-sidebar>
     <main>
-        <div class="row">
-            <div class="col-5">
-                
-            </div>
-        </div>
-    <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark shadow p-3 mb-5 float-start position-absolute" style="width: 280px; z-index: 999;">
-        <div class="header-profil">
-        <a href="#" class="d-flex align-items-center text-decoration-none" id="dropdownUser1" aria-expanded="false">
-            <img src="{{asset('assets/img/img.jpeg')}}" alt="" width="50" height="55" class="rounded-circle me-2">
-            <h6 id="nama-fs-4" >Misbah, S.T, M.Eng.</h6>
-            <i class="bi-list" style="font-size: 1.5rem; color: #325135"></i>
-            <p id="kategori">Admin</p>
-        </a>
-        </div>
-        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-        </a>
-        <hr id="garis1">
-        <ul class="nav nav-pills flex-column mb-auto">
-        <li class="nav-item">
-            <a href="#" class="nav-link text-white">
-            <i class="bi-grid-fill" style="font-size: 1.5rem; color: #325135"></i>
-            <h6 id="dashboard">Dashboard</h6>
-            </a>
-        </li>
-        <li>
-            <a href="#" class="nav-link text-white">
-            <i class="bi-person-fill" style="font-size: 1.5rem; color: #325135"></i>
-            <h6 id="profil">Profil</h6>
-            </a>
-        </li>
-        <li>
-            <a href="#" class="nav-link text-white">
-            <i class="bi-display-fill" style="font-size: 1.5rem; color: #325135"></i>
-            <h6 id="monitoring">Monitoring</h6>
-            </a>
-        </li>
-        <!---
-        <li>
-            <a href="#" class="nav-link text-white">
-            <i class="bi-table" style="font-size: 1.5rem; color: #325135"></i>
-            <h6 id="data-LKE">Data LKE</h6>
-            </a>
-        </li>
-        <li>
-        <!-->
-            <a href="#" class="nav-link text-white">
-            <i class="bi-file-arrow-up-fill" style="font-size: 1.5rem; color: #325135"></i>
-            <h6 id="upload">Upload Data</h6>
-            </a>
-        </li>
-        <li>
-            <a href="#" class="nav-link active" aria-current="page">
-            <i class="bi-patch-check-fill" style="font-size: 1.5rem; color: #325135"></i>
-            <h6 id="verifikasi">Verifikasi Data</h6>
-            </a>
-        </li>
-        <!---
-        <li>
-            <a href="#" class="nav-link text-white">
-            <i class="bi-file-check-fill" style="font-size: 1.5rem; color: #325135"></i>
-            <h6 id="audit">Audit</h6>
-            </a>
-        </li>
-        <!-->
-        <hr id="garis2">
-        </ul>
-        <!---
-        <li>
-            <a href="#" class="nav-link text-white">
-            <i class="bi-bell-fill" style="font-size: 1.5rem; color: #325135"></i>
-            <h6 id="notifikasi">Notifikasi</h6>
-            </a>
-        </li>
-        <li>
-            <a href="#" class="nav-link text-white">
-            <i class="bi-gear-fill" style="font-size: 1.5rem; color: #325135"></i>
-            <h6 id="cms">CMS</h6>
-            </a>
-        </li>
-        <!-->
-        <li>
-            <a href="#" class="nav-link text-white">
-            <i class="bi-arrow-right-square-fill" style="font-size: 1.5rem; color: #325135"></i>
-            <h6 id="logout">Logout</h6>
-            </a>
-        </li>
-        </ul>
-    </div>
+        
     <!--Sidebar-->
     <!--Box periode-->
     <div class="mx-1" style="margin-left: 14rem !important;">
     <div class="container mt-4">
         <div class=" ps-4">
+            <button class="border-0 bg-transparent mt-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" style="margin-left:-4rem !important"><i class="bi-list" style="font-size: 1.5rem; color: #325135;"></i></button>
         <h1 class="w-100">Verifikasi Data</h1>
         </div>
         <div class="card">
