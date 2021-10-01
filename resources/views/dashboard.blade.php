@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -45,22 +45,25 @@
     <i class="bi-arrow-right-square-fill" style="font-size: 2rem; color: #325135"></i>
     -->
     <!--Sidebar-->
-    <main>
         <div class="row">
             <div class="col-5">
                 
             </div>
         </div>
     <div class="sticky-top">
-      <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark shadow p-3 mb-5 float-start position-absolute " style="width: 280px; z-index: 999; margin-top:11rem">
+      <div data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel" class="offcanvas show offcanvas-start d-flex flex-column flex-shrink-0 p-3 text-white bg-dark shadow p-3 mb-5 float-start position-absolute " style="width: 280px; z-index: 999; margin-top:11rem;height:100vh">
         <div class="header-profil">
-          <a href="#" class="d-flex align-items-center text-decoration-none" id="dropdownUser1" aria-expanded="false">
-            <img src="{{asset('assets/img/img.jpeg')}}" alt="" width="50" height="55" class="rounded-circle me-2">
-            <h6 id="nama-fs-4" >Misbah, S.T, M.Eng.</h6>
-            <i class="bi-list" style="font-size: 1.5rem; color: #325135"></i>
-            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button>
-            <p id="kategori">Admin</p>
-          </a>
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="{{asset('assets/img/img.jpeg')}}" alt="" width="50" height="55" class="rounded-circle me-2">
+                </div>
+                <div class="col-md-8">
+                     <span class="h6" id="nama-fs-4" >Misbah, S.T, M.Eng.</span>
+            <span id="kategori" class="ms-0">{{auth()->user()->level}}</span>
+
+                </div>
+            </div>
+            
         </div>
         <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
         </a>
@@ -113,7 +116,6 @@
           </li>
           <!-->
           <hr id="garis2">
-          </ul>
           <!---
           <li>
             <a href="#" class="nav-link text-white">
@@ -137,11 +139,14 @@
         </ul>
       </div>
     </div>
+    <main>
       <!--Sidebar-->
       <!--Box periode-->
       <div class="mx-1" style="margin-left: 20rem !important; margin-top: 13rem">
           <div class="container mt-4">
             <div class=" ps-5">
+            <button class="border-0 bg-transparent mt-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" style="margin-left:-4rem !important"><i class="bi-list" style="font-size: 1.5rem; color: #325135;"></i></button>
+
                 <h5 class="w-100" style="font-family: 'Poppins', sans-serif; font-weight: 400; color: #325135; margin-top: 1.5rem;">Dashboard</h5>
                 <br>
                 <h3 class="w-100" style="font-family: 'Poppins', sans-serif; font-weight: 500; color: #325135; ">Rekapitulasi 3 Bulan Terakhir</h3>
@@ -189,7 +194,7 @@
                         },
                     });
                 </script>
-                <div class="isi">
+                <div class="isi" style="margin-top:-2rem">
                     <div class="row p-2">
                         <div class="col-3">
                             <div class="card shadow p-3 mb-5" style="width: 13rem; height: 8rem;">
