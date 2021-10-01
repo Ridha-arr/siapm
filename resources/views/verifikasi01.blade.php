@@ -17,16 +17,20 @@
 <body>
     <!-- Buat Navbar Atas-->
     <!-- Gambar Logo dan Tulisan-->
-    <nav class="navbar navbar-light bg-light">
-    <div class="container-fluid">
-        <a class="navbar-gambar"> <img src= "{{asset('assets/img/warna.png')}}" alt="Logo" width="120" height="150" /> </a>
-        <div class="text-start ms-4">
-        <h3>SISTEM INFORMASI AKREDITASI PENJAMINAN MUTU</h3>
-        <br />
-        <h5>PENGADILAN NEGERI/PHI/TIPIKOR BANDA ACEH KELAS IA</h5>
-        </div>
+    <div class="fixed-top">
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-gambar"> <img src= "{{asset('assets/img/warna.png')}}" alt="Logo" width="120" height="150" /> </a>
+                <div class="text-start ms-4">
+                <h3>SISTEM INFORMASI AKREDITASI PENJAMINAN MUTU</h3>
+                <br />
+                <h5>PENGADILAN NEGERI/PHI/TIPIKOR BANDA ACEH KELAS IA</h5>
+                </div>
+            </div>
+        </nav>
     </div>
-    </nav>
+
+    
     <!-- Akhir Gambar Logo dan Tulisan-->
     <!-- Akhir Navbar-->
 

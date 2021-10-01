@@ -45,11 +45,6 @@
     <i class="bi-arrow-right-square-fill" style="font-size: 2rem; color: #325135"></i>
     -->
     <!--Sidebar-->
-        <div class="row">
-            <div class="col-5">
-                
-            </div>
-        </div>
     <div class="sticky-top">
       <div data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel" class="offcanvas show offcanvas-start d-flex flex-column flex-shrink-0 p-3 text-white bg-dark shadow p-3 mb-5 float-start position-absolute " style="width: 280px; z-index: 999; margin-top:11rem;height:100vh">
         <div class="header-profil">
@@ -117,6 +112,7 @@
           <!-->
           <hr id="garis2">
           <!---
+            
           <li>
             <a href="#" class="nav-link text-white">
               <i class="bi-bell-fill" style="font-size: 1.5rem; color: #325135"></i>
