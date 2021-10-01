@@ -58,6 +58,7 @@
             <img src="{{asset('assets/img/img.jpeg')}}" alt="" width="50" height="55" class="rounded-circle me-2">
             <h6 id="nama-fs-4" >Misbah, S.T, M.Eng.</h6>
             <i class="bi-list" style="font-size: 1.5rem; color: #325135"></i>
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button>
             <p id="kategori">Admin</p>
           </a>
         </div>
