@@ -8,6 +8,7 @@ use App\Http\Controllers\GantiProfil;
 use App\Http\Controllers\Laporan;
 use App\Http\Controllers\Login;
 use App\Http\Controllers\LoginApi;
+use App\Http\Controllers\verifikasi;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,4 +41,5 @@ Route::middleware('auth')->group(function () {
     });
 });
 Route::get('/profil', [Profil::class, 'index'])->name('profil');
+Route::get('/verifikasi', [verifikasi::class, 'index'])->name('verifikasi');
 Route::get('/gantiprofil', [GantiProfil::class, 'index'])->name('gantiprofil');

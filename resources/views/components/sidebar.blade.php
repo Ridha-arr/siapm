@@ -12,10 +12,8 @@
                     <div class="col-md-8">
                         <span class="h6" id="nama-fs-4">Misbah, S.T, M.Eng.</span>
                         <span id="kategori" class="ms-0">{{ auth()->user()->level }}</span>
-
                     </div>
                 </div>
-
             </div>
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
             </a>
@@ -54,7 +52,7 @@
                 </a>
                 </li>
                 <li>
-                    <a href="#" class="nav-link text-white">
+                    <a href="{{route('verifikasi')}}" class="nav-link text-white">
                         <i class="bi-patch-check-fill" style="font-size: 1.5rem; color: #325135"></i>
                         <h6 id="verifikasi">Verifikasi Data</h6>
                     </a>
