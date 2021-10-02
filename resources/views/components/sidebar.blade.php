@@ -1,4 +1,4 @@
-    <div class="sticky-top">
+    <div class="fixed-top" style="margin-top: 13rem">
         <div data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling"
             aria-labelledby="offcanvasScrollingLabel"
             class="offcanvas show offcanvas-start d-flex flex-column flex-shrink-0 p-3 text-white bg-dark shadow p-3 mb-5 float-start position-absolute "
