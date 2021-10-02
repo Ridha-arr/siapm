@@ -53,7 +53,7 @@
     <div class="mx-1" style="margin-left: 14rem !important;margin-top:13rem">
     <div class="container mt-4">
         <div class=" ps-4">
-            <button class="border-0 bg-transparent mt-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" style="margin-left:-4rem !important"><i class="bi-list" style="font-size: 1.5rem; color: #325135;"></i></button>
+            <button class="border-0 bg-transparent mt-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="bi-list" style="font-size: 1.5rem; color: #325135;"></i></button>
         <h1 class="w-100">Verifikasi Data</h1>
         </div>
         <div class="card">

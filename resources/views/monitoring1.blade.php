@@ -56,6 +56,7 @@
           <div class="container mt-4">
             <div class=" ps-5">
               <h5 class="w-50" style="font-family: 'Poppins', sans-serif; font-weight: 400; color: #325135; margin-top: 1.5rem; margin-left: 1rem;">Monitoring</h5>
+              <button class="border-0 bg-transparent mt-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="bi-list" style="font-size: 1.5rem; color: #325135;"></i></button>
             </div>
                 <div class="card">
                     <div class="card-body">
