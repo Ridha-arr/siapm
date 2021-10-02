@@ -6,27 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/styleu1.css') }}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <link href="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js">
+    <script type="text/javascript" src="chartjs/Chart.js"></script>
+
 
     <title>Sistem Informasi Akreditasi Penjaminan Mutu</title>
   </head>
   <body>
     <!-- Buat Navbar Atas-->
     <!-- Gambar Logo dan Tulisan-->
-    <div class="fixed-top">
-    <nav class="navbar navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-gambar"> <img src="{{ asset('assets/img/warna.png') }}" alt="Logo" width="120" height="150" /> </a>
-        <div class="text-start ms-4">
-          <h3>SISTEM INFORMASI AKREDITASI PENJAMINAN MUTU</h3>
-          <br />
-          <h5>PENGADILAN NEGERI/PHI/TIPIKOR BANDA ACEH KELAS IA</h5>
+  
+      <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-gambar"> <img src="///d:/APM/FRONT END/Upload/Upload2/warna.png" alt="Logo" width="120" height="150" /> </a>
+          <div class="text-start ms-4">
+            <h3>SISTEM INFORMASI AKREDITASI PENJAMINAN MUTU</h3>
+            <br /> 
+            <h5>PENGADILAN NEGERI/PHI/TIPIKOR BANDA ACEH KELAS IA</h5>
+          </div>
         </div>
-      </div>
-    </nav>
-    </div>
+      </nav>
+   
     <!-- Akhir Gambar Logo dan Tulisan-->
     <!-- Akhir Navbar-->
 
@@ -48,12 +52,11 @@
                 
             </div>
         </div>
-      <div class="sticky-top">
-      <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark shadow p-3 mb-5 float-start position-absolute " style="width: 280px; z-index: 999; margin-top: 11rem">
+      <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark shadow p-3 mb-5 float-start position-absolute" style="width: 280px; z-index: 999;">
         <div class="header-profil">
           <a href="#" class="d-flex align-items-center text-decoration-none" id="dropdownUser1" aria-expanded="false">
-            <img src="{{asset('assets/img/img.jpeg')}}" alt="" width="50" height="55" class="rounded-circle me-2">
-            <h6 id="nama-fs-4" >Misbah, S.T, M.Eng.</h6>
+            <img src="///d:/APM/FRONT END/Monitoring/img.jpeg" alt="" width="50" height="55" class="rounded-circle me-2">
+            <h6 id="nama-fs-4" >Misbah, S.T, M.T.</h6>
             <i class="bi-list" style="font-size: 1.5rem; color: #325135"></i>
             <p id="kategori">Admin</p>
           </a>
@@ -69,13 +72,13 @@
             </a>
           </li>
           <li>
-            <a href="#" class="nav-link text-white">
+            <a href="#" class="nav-link text-white">  
               <i class="bi-person-fill" style="font-size: 1.5rem; color: #325135"></i>
               <h6 id="profil">Profil</h6>
             </a>
           </li>
           <li>
-            <a href="#" class="nav-link text-white">
+            <a href="#" class="nav-link active" aria-current="page" >
               <i class="bi-display-fill" style="font-size: 1.5rem; color: #325135"></i>
               <h6 id="monitoring">Monitoring</h6>
             </a>
@@ -89,7 +92,7 @@
           </li>
           <li>
           <!-->
-            <a href="#" class="nav-link active" aria-current="page">
+            <a href="#" class="nav-link text-white">
               <i class="bi-file-arrow-up-fill" style="font-size: 1.5rem; color: #325135"></i>
               <h6 id="upload">Upload Data</h6>
             </a>
@@ -132,58 +135,51 @@
           </li>
         </ul>
       </div>
-      </div>
       <!--Sidebar-->
       <!--Box periode-->
-      <div class="mx-1" style="margin-left: 14rem !important; margin-top: 13rem">
-        <div class="container mt-4">
-          <div class=" ps-4">
-            <h1 class="w-100">Upload Data</h1>
-          </div>
-          <div class="card" style="width: 70rem; height: 30rem;">
-            <div class="card-body">
-              <h5 id="card-title">Periode Berkas</h5>
-              <form action="{{route('upload2')}}" method="get">
-              <div class="mb-3 row">
-                <label for="inputMonth" class="col-sm-2 col-form-label">Bulan/Tahun</label>
-                <div class="col-sm-5">
-                  <input type="month" name="bulan" class="form-control" id="inputMonth" />
-                </div>
-              </div>
-              <div class="mb-3 row">
-                <label for="inputSelection" class="col-sm-2 col-form-label">Area</label>
-                <div class="col-sm-5">
-                  <select class="form-select" name="area" aria-label=".form-select-example">
-                    <option value="" disabled selected>Pilih Area</option>
-                    <option value="ketua">KETUA</option>
-                    <option value="wakil">WAKIL</option>
-                    <option value="panitera">PANITERA</option>
-                    <option value="sekretaris">SEKRETARIS</option>
-                    <option value="hakim">HAKIM</option>
-                    <option value="panmud hukum">PANMUD HUKUM</option>
-                    <option value="panmud perdata">PANMUD PERDATA</option>
-                    <option value="jurusita">JURUSITA</option>
-                    <option value="panmud pidana">PANMUD PIDANA</option>
-                    <option value="panitera pengganti">PANITERA PENGGANTI</option>
-                    <option value="sub.bag kepegawaian & ortala">SUB.BAG KEPEGAWAIAN & ORTALA</option>
-                    <option value="sub.bag umum & keuangan">SUB.BAG UMUM & KEUANGAN</option>
-                    <option value="sub.bag ptip">SUB.BAG PTIP</option>
-                    <option value="panmud tipikor">PANMUD TIPIKOR</option>
-                    <option value="panmud phi">PANMUD PHI</option>
-                  </select>
-                </div>
-              </div>
-              <div class="mb-5 row">
-                <button type="submit" class="btn btn-secondary">Buka</button>
-              </div>
-              </form>
+      <div class="mx-1" style="margin-left: 20rem !important; margin-top: 2rem;">
+          <div class="container mt-4">
+            <div class=" ps-5">
+              <h5 class="w-50" style="font-family: 'Poppins', sans-serif; font-weight: 400; color: #325135; margin-top: 1.5rem; margin-left: 1rem;">Monitoring</h5>
             </div>
-          </div>
-        </div>
-      </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="w-100 align-start">
+                            <div class="mx-auto">
+                            
+                                <div class="mb-3 w-100 row mx-auto">
+                                    <div class="card-subtitle text-left">
+                                        <h5 style="color: #325135; margin-top: 1rem; margin-bottom: 1rem; font-weight: 700;">Nomor LKE</h5>
+            
+                                        <div class="card" style="width: 60rem; margin-left: 0rem">
+                                            <div class="card-body">
+                                              <div class="mb-3">
+                                                <div class="isi">
+                                                  <div class="row p-1">
+                                                    <div class="col-sm-5">
+                                                      <label for="formFile" class="form-label">Nomor per isi</label>
+                                                      <br>
+                                                      <div class="progress">
+                                                        <div class="progress-bar btn-secondary" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+                                                      </div>
+                                                      <button type="button" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem         ;">
+                                                        View Laporan </button>  
+                                
+                                                    </div>
+                                                     
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
       <!--Akhir Box Periode-->
-    </main>
-    <!--Akhir dari isi-->
+      </main>
+      <!--Akhir dari isi-->
   </body>
 </html>
-

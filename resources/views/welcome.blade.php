@@ -38,7 +38,7 @@
     <!-- Akhir Navbar-->
 
     <!-- Buat isi login-->
-    <div class="isi w-100 h-100">
+    <div class="isi w-100 h-100" style="margin-top: 11rem">
         <img src="{{ asset('assets/img/background.jpeg') }}" class="position-absolute" style="width:100vw" alt="">
         <div class="row p-5">
             <div class="col">
@@ -98,7 +98,7 @@
                                       {{$message}}
                                     </div>
                                 @endif
-                                <label for="exampleInputPassword1" class="form-label2">Password</label>
+                                <label for="exampleInputPassword1" class="form-label2 mt-2">Password</label>
                                 <input type="password" name="password" class="form-control" id="exampleInputPassword1">
                                 <button type="submit" class="btn btn-success w-100 mt-4">Login</button>
                                 <div class="text-center">
