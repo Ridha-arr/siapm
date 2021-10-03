@@ -30,6 +30,17 @@ class Laporan extends Controller
     ])->groupBy(['area', 'laporan_count','verif'])->get();
       return response()->json($area,200);
     }
+    public function getJob($area,$year,$month){
+      $job = Valid::where('area',$area)->with('laporan', function ($query) use ($year, $month) {
+        return $query->whereYear('date', '=', $year)
+          ->whereMonth('date', '=', $month);
+      })->select(DB::raw('name,SUM(ketentuan) AS ketentuan'))->withCount('laporan')->withCount([
+        'laporan as verif' => function ($query) {
+          $query->where('verif', 1);
+        }
+      ])->groupBy(['laporan_count', 'verif','name'])->get();
+      return response()->json($job, 200);
+    }
     public function uploadLaporan(Request $request){
     $validator = $request->validate([
       'user_id' => 'required',
