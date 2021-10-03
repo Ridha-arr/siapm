@@ -76,8 +76,8 @@
                                         Download <i class="bi bi-download" style="margin: 5px;"></i></button>
                                         <button type="button" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem         ;">
                                         Cetak <i class="bi bi-printer" style="margin: 5px;"></i></button>
-                                        <button type="button" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem         ;">
-                                        View Laporan </button>
+                                        <a href="{{route('verifikasi/area/detail')}}" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem         ;">
+                                        View Laporan </a>
                                     </div>
                                 </div>
                             </div>

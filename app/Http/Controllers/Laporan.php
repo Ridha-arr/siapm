@@ -23,7 +23,11 @@ class Laporan extends Controller
       $area = Valid::whereHas('laporan',function ($query) use($year,$month){
         return $query->whereYear('date', '=', $year)
         ->whereMonth('date', '=', $month);
-      })->select(DB::raw('area,SUM(ketentuan) AS ketentuan'))->withCount('laporan')->groupBy(['area', 'laporan_count'])->get();
+      })->select(DB::raw('area,SUM(ketentuan) AS ketentuan'))->withCount('laporan')->withCount([
+      'laporan as verif' => function ($query) {
+        $query->where('verif',1);
+      }
+    ])->groupBy(['area', 'laporan_count','verif'])->get();
       return response()->json($area,200);
     }
     public function uploadLaporan(Request $request){

@@ -71,8 +71,8 @@
                             <div class="progress p-0">
                                 <div class="progress-bar btn-secondary" role="progressbar" style="width: 70%; margin-left: 0%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
                             </div>
-                            <button type="button" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem         ;">
-                                View Laporan </button>
+                            <a href="{{route('verifikasi/area/detail/isi')}}" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem         ;">
+                                View Laporan </a>
                             </div>
                         </div>
                         </div>

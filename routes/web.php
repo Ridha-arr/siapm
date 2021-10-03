@@ -43,4 +43,7 @@ Route::middleware('auth')->group(function () {
 Route::get('/profil', [Profil::class, 'index'])->name('profil');
 Route::get('/verifikasi', [verifikasi::class, 'index'])->name('verifikasi');
 Route::get('/verifikasi/area', [verifikasi::class, 'area'])->name('verifikasi/area');
+Route::get('/verifikasi/area/detail', [verifikasi::class, 'detail'])->name('verifikasi/area/detail');
+Route::get('/verifikasi/area/detail/isi', [verifikasi::class, 'isi'])->name('verifikasi/area/detail/isi');
+Route::get('/verifikasi/area/detail/isi/syarat', [verifikasi::class, 'syarat'])->name('verifikasi/area/detail/isi/syarat');
 Route::get('/gantiprofil', [GantiProfil::class, 'index'])->name('gantiprofil');
