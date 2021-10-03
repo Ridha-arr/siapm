@@ -28,7 +28,7 @@ class Laporan extends Controller
       'laporan as verif' => function ($query) {
         $query->where('verif',1);
       }
-    ])->groupBy(['area', 'laporan_count','verif'])->get();
+    ])->groupBy(['area', 'laporan_count','verif'])->orderBy('id', 'ASC')->get();
       return response()->json($area,200);
     }
     
@@ -38,7 +38,7 @@ class Laporan extends Controller
           $query->where('verif', 1)->whereYear('date', '=', $year)
         ->whereMonth('date', '=', $month);;
         }
-      ])->groupBy(['laporan_count', 'verif','name','id'])->get();
+      ])->groupBy(['laporan_count', 'verif','name','id'])->orderBy('id', 'ASC')->get();
       return response()->json($job, 200);
     }
   public function getTask($job, $year, $month)
@@ -48,7 +48,7 @@ class Laporan extends Controller
         $query->whereYear('date', '=', $year)
         ->whereMonth('date', '=', $month);
       }
-    ])->get();
+    ])->orderBy('id', 'ASC')->get();
     return response()->json($task, 200);
   }
     public function uploadLaporan(Request $request){

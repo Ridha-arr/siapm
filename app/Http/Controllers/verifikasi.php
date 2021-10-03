@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Laporan;
 use Illuminate\Http\Request;
 
 class verifikasi extends Controller
 {
     public function index(){
-        return view('verifikasi01');
+        return view('verifikasi01',[
+            'laporan' => Laporan::all()->count(),
+            'verif' => Laporan::where('verif',0)->count()
+        ]);
     }
     public function area(){
         return view('verifikasi02');

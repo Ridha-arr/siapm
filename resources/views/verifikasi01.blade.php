@@ -68,7 +68,7 @@
                       <div class="isi">
                           <div class="row p-1">
                           <div class="progress p-0">
-                            <div class="progress-bar btn-secondary" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                            <div class="progress-bar btn-secondary" role="progressbar" style="width: {{(($laporan * 100)/$laporan)-((($verif/$laporan)*100))}}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{(($laporan * 100)/$laporan)-((($verif/$laporan)*100))}}</div>
                           </div>
                           </div><br>
                           <button type="button" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem         ;">
