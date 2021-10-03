@@ -146,7 +146,7 @@
                 <div class="isi">
                     <div class="row p-2">
                         <div class="col-5">
-                            <video controls="true" autoplay="true" width="300" height="200">
+                            <video controls="true" width="300" height="200">
                                 <source src="{{asset('assets/media/MA.mp4')}}"/>
                             </video>
                         </div>

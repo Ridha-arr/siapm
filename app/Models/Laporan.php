@@ -24,4 +24,11 @@ class Laporan extends Model
     {
         return $this->hasOne(Tanggals::class, 'id', 'laporan_id');
     }
+    public function keterangan(){
+        return $this->belongsTo(Keterangan::class, 'keterangan_id', 'id');
+    }
+    public function valid()
+    {
+        return $this->hasOne(Valid::class, 'id', 'valid_id');
+    }
 }

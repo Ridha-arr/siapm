@@ -12,4 +12,8 @@ class Keterangan extends Model
     {
         return $this->hasOne(Laporan::class, 'keterangan_id', 'id');
     }
+    public function valid()
+    {
+        return $this->hasOne(Valid::class, 'id', 'valid_id');
+    }
 }

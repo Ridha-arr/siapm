@@ -17,4 +17,7 @@ class Valid extends Model
     public function keterangan(){
         return $this->hasMany(Keterangan::class,'valid_id','id');
     }
+    public function laporan(){
+        return $this->hasMany(Laporan::class,'valid_id','id');
+    }
 }
