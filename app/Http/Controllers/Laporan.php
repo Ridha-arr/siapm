@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Keterangan;
 use App\Models\Laporan as ModelsLaporan;
 use App\Models\Tanggals;
 use App\Models\Valid;
@@ -30,17 +31,26 @@ class Laporan extends Controller
     ])->groupBy(['area', 'laporan_count','verif'])->get();
       return response()->json($area,200);
     }
+    
     public function getJob($area,$year,$month){
-      $job = Valid::where('area',$area)->with('laporan', function ($query) use ($year, $month) {
-        return $query->whereYear('date', '=', $year)
-          ->whereMonth('date', '=', $month);
-      })->select(DB::raw('name,SUM(ketentuan) AS ketentuan'))->withCount('laporan')->withCount([
-        'laporan as verif' => function ($query) {
-          $query->where('verif', 1);
+      $job = Valid::where('area',$area)->select(DB::raw('name,id,SUM(ketentuan) AS ketentuan'))->withCount('laporan')->withCount([
+        'laporan as verif' => function ($query) use($year,$month){
+          $query->where('verif', 1)->whereYear('date', '=', $year)
+        ->whereMonth('date', '=', $month);;
         }
-      ])->groupBy(['laporan_count', 'verif','name'])->get();
+      ])->groupBy(['laporan_count', 'verif','name','id'])->get();
       return response()->json($job, 200);
     }
+  public function getTask($job, $year, $month)
+  {
+    $task = Keterangan::where('valid_id',$job)->withCount([
+      'laporan as status' => function ($query) use ($year,$month){
+        $query->whereYear('date', '=', $year)
+        ->whereMonth('date', '=', $month);
+      }
+    ])->get();
+    return response()->json($task, 200);
+  }
     public function uploadLaporan(Request $request){
     $validator = $request->validate([
       'user_id' => 'required',

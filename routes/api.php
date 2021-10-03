@@ -25,3 +25,4 @@ Route::post('/loginapi', [LoginApi::class, 'login']);
 Route::get('/laporan', [ControllersLaporan::class, 'getAllLaporan']);
 Route::get('/laporan/area/{year}/{month}', [ControllersLaporan::class, 'getArea']);
 Route::get('/laporan/job/{area}/{year}/{month}', [ControllersLaporan::class, 'getJob']);
+Route::get('/laporan/task/{area}/{year}/{month}', [ControllersLaporan::class, 'getTask']);
