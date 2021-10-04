@@ -25,10 +25,28 @@ class Monitoring extends Controller
             'valids'=>Valid::select('area')->groupBy('area')->get()
         ]);
     }
-    public function getDetail($area){
+    public static function getDetail($area){
         $detail = Laporan::whereHas('valid',function($valid) use($area){
             $valid->where('area',$area);
-        })->get();
+        })->get()->count();
         return $detail;
+    }
+    public static function getTotal($area)
+    {
+        $total = Valid::where('area',$area)->sum('ketentuan');
+        return $total;
+    }
+    public static function getVerif($area)
+    {
+        $detail = Laporan::whereHas('valid', function ($valid) use ($area) {
+            $valid->where('area', $area);
+        })->where('verif',1)->get()->count();
+        return $detail;
+    }
+    public function view($area)
+    {
+        return view('monitoring3',[
+            'details' => Valid::where('area', $area)->get(),
+        ]);
     }
 }

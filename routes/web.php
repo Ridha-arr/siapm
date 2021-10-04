@@ -44,6 +44,7 @@ Route::middleware('auth')->group(function () {
 Route::get('/profil', [Profil::class, 'index'])->name('profil');
 Route::get('/monitoring', [Monitoring::class, 'index'])->name('monitoring');
 Route::get('/monitoring/detail', [Monitoring::class, 'detail'])->name('monitoring/detail');
+Route::get('/monitoring/view/{area}', [Monitoring::class, 'view'])->name('monitoring/view');
 Route::get('/verifikasi', [verifikasi::class, 'index'])->name('verifikasi');
 Route::post('/verif', [verifikasi::class, 'verif'])->name('verif');
 Route::get('/verifikasi/area', [verifikasi::class, 'area'])->name('verifikasi/area');

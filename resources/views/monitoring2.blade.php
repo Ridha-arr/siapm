@@ -1,3 +1,5 @@
+<?php use \App\Http\Controllers\Monitoring;
+ ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -49,46 +51,9 @@
     <!--Sidebar-->
     <x-sidebar></x-sidebar>
     <main>
-           <!--Sidebar-->
-      <!--Box periode-->
-      <div class="mx-1" style="margin-left: 20rem !important; margin-top: 13rem;">
-          <div class="container mt-4">
-            <div class=" ps-5">
-              <h5 class="w-50" style="font-family: 'Poppins', sans-serif; font-weight: 400; color: #325135; margin-top: 1.5rem; margin-left: 1rem;">Monitoring</h5>
-              <button class="border-0 bg-transparent mt-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="bi-list" style="font-size: 1.5rem; color: #325135;"></i></button>
-            </div>
-            @foreach ($valids as $valid)
-                
-                <div class="card">
-                    <div class="card-body">
-                        <div class="w-100 align-start">
-                            <div class="mx-auto">
-                                <div class="mb-3 w-100 row mx-auto">
-                                    <div class="card-subtitle text-left">
-                                        <h5 style="color: #325135; margin-top: 1rem; margin-bottom: 1rem; font-weight: 700;">{{$valid->area}}</h5>
-                                        <div style="width: 700px;height: 400px">
-                                          <canvas id="myChart"></canvas>
-                                      </div>
-                                      @php
-                                          
-                                      @endphp
-                                        <div class="mb-3 text-start">
-                                          <button type="button" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem         ;">
-                                            Lihat Detil </button>
-                                          <button type="button" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 2rem         ;">
-                                            Download Laporan <i class="bi bi-download" style="margin: 5px;"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-            @endforeach
-             <script>
+        <script>
                  function chart(id,tersedia,verif,total) {
-                     var ctx = document.getElementById('myChart').getContext('2d');
+                     var ctx = document.getElementById(id).getContext('2d');
                                           var myChart = new Chart(ctx, {
                                               type: 'bar',
                                               data: {
@@ -96,7 +61,7 @@
                                                   datasets: [
                                                       {
                                                           label: 'Laporan',
-                                                          data: [12, 19, 3],
+                                                          data: [tersedia, verif, total],
                                                           backgroundColor: ['rgb(253, 215, 3)', 'rgb(27, 128, 1)', 'rgb(139, 5, 0)'],
                                                           borderWidth:2,
                                                           borderColor: ['rgb(253, 215, 3)',  'rgb(27, 128, 1)',  'rgb(139, 5, 0)'],
@@ -117,6 +82,49 @@
                                           });
                  }
              </script>
+           <!--Sidebar-->
+      <!--Box periode-->
+      <div class="mx-1" style="margin-left: 20rem !important; margin-top: 13rem;">
+          <div class="container mt-4">
+            <div class=" ps-5">
+              <h5 class="w-50" style="font-family: 'Poppins', sans-serif; font-weight: 400; color: #325135; margin-top: 1.5rem; margin-left: 1rem;">Monitoring</h5>
+              <button class="border-0 bg-transparent mt-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="bi-list" style="font-size: 1.5rem; color: #325135;"></i></button>
+            </div>
+            @foreach ($valids as $valid)
+                
+                <div class="card">
+                    <div class="card-body">
+                        <div class="w-100 align-start">
+                            <div class="mx-auto">
+                                <div class="mb-3 w-100 row mx-auto">
+                                    <div class="card-subtitle text-left">
+                                        <h5 style="color: #325135; margin-top: 1rem; margin-bottom: 1rem; font-weight: 700;">{{$valid->area}}</h5>
+                                        <div style="width: 700px;height: 400px">
+                                          <canvas id="{{$valid->area}}"></canvas>
+                                      </div>
+                                      @php
+                                          $tersedia = Monitoring::getDetail($valid->area);
+                                          $total = Monitoring::getTotal($valid->area);
+                                          $verif = Monitoring::getVerif($valid->area);
+                                      @endphp
+                                      <script>
+                                          chart('{{$valid->area}}',{{$tersedia}},{{$verif}},{{$total}})
+                                      </script>
+                                        <div class="mb-3 text-start">
+                                          <a href="{{route('monitoring/view',['area'=>$valid->area])}}" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem         ;">
+                                            Lihat Detil </a>
+                                          <button type="button" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 2rem         ;">
+                                            Download Laporan <i class="bi bi-download" style="margin: 5px;"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            @endforeach
+             
       <!--Akhir Box Periode-->
       </main>
       <!--Akhir dari isi-->
