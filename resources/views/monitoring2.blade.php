@@ -98,7 +98,7 @@
                             <div class="mx-auto">
                                 <div class="mb-3 w-100 row mx-auto">
                                     <div class="card-subtitle text-left">
-                                        <h5 style="color: #325135; margin-top: 1rem; margin-bottom: 1rem; font-weight: 700;">{{$valid->area}}</h5>
+                                        <h5 style="color: #325135; margin-top: 1rem; margin-bottom: 1rem; font-weight: 700;">{{strtoupper($valid->area)}}</h5>
                                         <div style="width: 700px;height: 400px">
                                           <canvas id="{{$valid->area}}"></canvas>
                                       </div>

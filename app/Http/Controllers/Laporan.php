@@ -28,7 +28,7 @@ class Laporan extends Controller
       'laporan as verif' => function ($query) {
         $query->where('verif',1);
       }
-    ])->selectRaw(DB::raw('sum(ketentuan) AS ketentuan,area'))->groupBy(['area', 'laporan_count','verif'])->orderBy('id', 'ASC')->get();
+    ])->selectRaw(DB::raw('area,sum(ketentuan) AS ketentuan'))->groupBy(['area', 'laporan_count','verif'])->orderBy('id', 'ASC')->get();
       return response()->json($area,200);
     }
     
