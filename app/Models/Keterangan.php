@@ -10,7 +10,7 @@ class Keterangan extends Model
     use HasFactory;
     public function laporan()
     {
-        return $this->hasMany(Laporan::class, 'valid_id', 'id');
+        return $this->hasOne(Laporan::class, 'keterangan_id', 'id');
     }
     public function valid()
     {

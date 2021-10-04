@@ -20,4 +20,8 @@ class Valid extends Model
     public function laporan(){
         return $this->hasMany(Laporan::class,'valid_id','id');
     }
+    public function laporanNotVerif()
+    {
+        return $this->hasMany(Laporan::class, 'valid_id', 'id')->where('verif',0);
+    }
 }
