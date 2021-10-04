@@ -68,7 +68,7 @@
                       <div class="isi">
                           <div class="row p-1">
                           <div class="progress p-0">
-                            @if (isset($laporan))
+                            @if ($laporan)
                                <div class="progress-bar btn-secondary" role="progressbar" style="width: {{(($laporan * 100)/$laporan)-((($verif/$laporan)*100))}}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{(($laporan * 100)/$laporan)-((($verif/$laporan)*100))}}%</div> 
                             @else
                             <div class="progress-bar btn-secondary" role="progressbar" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">0%</div>
