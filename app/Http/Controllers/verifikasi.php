@@ -18,7 +18,7 @@ class verifikasi extends Controller
     }
     public function area(){
         return view('verifikasi02',[
-            'laporans' => Valid::groupBy(['area'])->select(DB::raw('area'))->get()
+            'laporans' => Valid::groupBy(['area'])->select(DB::raw('area'))->orderBy('id','ASC')->get()
         ]);
     }
     public static function getArea($area){
