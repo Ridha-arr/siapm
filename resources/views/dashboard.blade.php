@@ -51,10 +51,10 @@
       <!--Box periode-->
       <div class="mx-1" style="margin-left: 20rem !important; margin-top: 13rem">
           <div class="container mt-4">
-            <div class=" ps-5">
-            <button class="border-0 bg-transparent mt-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" style="margin-left:-4rem !important"><i class="bi-list" style="font-size: 1.5rem; color: #325135;"></i></button>
-
-                <h5 class="w-100" style="font-family: 'Poppins', sans-serif; font-weight: 400; color: #325135; margin-top: 1.5rem;">Dashboard</h5>
+            <div class=" ps-5 mb-4">
+                <span class="w-50 h5 m-4" style="font-family: 'Poppins', sans-serif; font-weight: 400; color: #325135; margin-top: 1.5rem; margin-left: 1rem;">Dashboard</span>
+                <button class="border-0 bg-transparent mt-4 float-start" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" style="margin-left: -6rem !important"><i class="bi-list" style="font-size: 1.5rem; color: #325135;"></i></button>
+            </div>
                 <br>
                 <h3 class="w-100" style="font-family: 'Poppins', sans-serif; font-weight: 500; color: #325135; ">Rekapitulasi 3 Bulan Terakhir</h3>
                 <div style="width: 700px;height: 400px">

@@ -54,9 +54,9 @@
       <!--Box periode-->
       <div class="mx-1" style="margin-left: 20rem !important; margin-top: 13rem;">
           <div class="container mt-4">
-            <div class=" ps-5">
-              <h5 class="w-50" style="font-family: 'Poppins', sans-serif; font-weight: 400; color: #325135; margin-top: 1.5rem; margin-left: 1rem;">Monitoring</h5>
-              <button class="border-0 bg-transparent mt-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="bi-list" style="font-size: 1.5rem; color: #325135;"></i></button>
+            <div class=" ps-5 mb-4">
+              <span class="w-50 h5 m-4" style="font-family: 'Poppins', sans-serif; font-weight: 400; color: #325135; margin-top: 1.5rem; margin-left: 1rem;">Monitoring</span>
+              <button class="border-0 bg-transparent mt-4 float-start" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" style="margin-left: -6rem !important"><i class="bi-list" style="font-size: 1.5rem; color: #325135;"></i></button>
             </div>
                 <div class="card">
                     <div class="card-body">
@@ -67,7 +67,6 @@
                                     <div class="card-subtitle text-left">
                                         <h5 style="color: #325135; margin-top: 1rem; margin-bottom: 1rem; font-weight: 700;">LAPORAN DATA APM</h5>
                                         <h5 style="color: #325135; margin-bottom: 1rem;">PENGADILAN NEGERI BANDA ACEH</h5>
-                                        <h5 style="color: #325135; margin-bottom: 1rem;">PER BULAN JULI 2021</h5>
                                         <div style="width: 700px;height: 400px">
                                           <canvas id="myChart"></canvas>
                                       </div>

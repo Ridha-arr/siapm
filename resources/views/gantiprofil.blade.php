@@ -60,7 +60,7 @@
         
       <!--Sidebar-->
       <!--Box periode-->
-      <div class="mx-1" style="margin-left: 20rem !important;">
+      <div class="mx-1" style="margin-left: 20rem !important; margin-top:11rem">
           <div class="container mt-4">
                 <div class="card">
                     <div class="card-body">
@@ -122,11 +122,11 @@
                                                 <option {{$user->area== "jurusita"?'selected':''}} value="jurusita" >JURUSITA</option>
                                                 <option {{$user->area== "panmud pidana"?'selected':''}} value="panmud pidana" >PANMUD PIDANA</option>
                                                 <option {{$user->area== "panitera pengganti"?'selected':''}} value="panitera pengganti">PANITERA PENGGANTI</option>
-                                                <option {{$user->area== "kepegawaian"?'selected':''}} value="kepegawaian">SUB.BAG KEPEGAWAIAN & ORTALA</option>
-                                                <option {{$user->area== "keuangan"?'selected':''}} value="keuangan">SUB.BAG UMUM & KEUANGAN</option>
-                                                <option {{$user->area== "ptip"?'selected':''}} value="ptip">SUB.BAG PTIP</option>
-                                                <option {{$user->area== "tipikor"?'selected':''}} value="tipikor">PANMUD TIPIKOR</option>
-                                                <option {{$user->area== "phi"?'selected':''}} value="phi">PANMUD PHI</option>
+                                                <option {{$user->area== "sub.bag kepegawaian & ortala"?'selected':''}} value="sub.bag kepegawaian & ortala">SUB.BAG KEPEGAWAIAN & ORTALA</option>
+                                                <option {{$user->area== "sub.bag umum & keuangan"?'selected':''}} value="sub.bag umum & keuangan">SUB.BAG UMUM & KEUANGAN</option>
+                                                <option {{$user->area== "sub.bag ptip"?'selected':''}} value="sub.bag ptip">SUB.BAG PTIP</option>
+                                                <option {{$user->area== "panmud tipikor"?'selected':''}} value="panmud tipikor">PANMUD TIPIKOR</option>
+                                                <option {{$user->area== "panmud phi"?'selected':''}} value="panmud phi">PANMUD PHI</option>
                                               </select>
                                         </div>
                                     </div>

@@ -11,6 +11,7 @@
                     </div>
                     <div class="col-md-8">
                         <span class="h6" id="nama-fs-4">{{auth()->user()->name}}</span>
+                        <br>
                         <span id="kategori" class="ms-0">{{ auth()->user()->level }}</span>
                     </div>
                 </div>
