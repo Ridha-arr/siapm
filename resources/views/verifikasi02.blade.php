@@ -63,7 +63,7 @@
         
             <div class="card">
                 <div class="card-body">
-                <h5 id="card-title" class="text-left">{{$laporan->area}}</h5>
+                <h5 id="card-title" class="text-left">{{strtoupper($laporan->area)}}</h5>
                 <div class="w-100 align-center">
                     <div class="mx-auto">
                         <div class="card" style=" margin-left: 0rem">
