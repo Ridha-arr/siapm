@@ -58,43 +58,28 @@
         </div>
         <div class="card">
         <div class="card-body">
-            <h5 id="card-title" class="text-center">NOMOR PER ISI</h5>
+            <h5 id="card-title" class="text-center">{{$valids->name}}</h5>
             <div class="w-100 align-center">
             <div class="mx-auto">
+                @foreach ($valids->keterangan as $keterangan)
+                    
                 <div class="card" style="margin-left: 0rem">
                 <div class="card-body">
                     <div class="mb-3">
-                        <label for="formFile" class="form-label">Syarat per isi</label>
+                        <label for="formFile" class="form-label">{{$keterangan->name}}</label>
                         
                     <div class="isi">
                         <div class="row p-1">
-                            <ul class="list-group">
-                                <li class="list-group-item">Dokumen yang memenuhi syarat</li>
-                                </ul>
-                        <button type="button" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem         ;">
-                            View </button>
+                        @if (isset($keterangan->laporan->id))
+                        <a href="{{route('verifikasi/syarat',['id'=>$keterangan->id])}}" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem         ;">
+                            View </a>
+                        @endif
                         </div>
                     </div>
                     </div>
                 </div>
                 </div>
-                <div class="card" style="margin-left: 0rem">
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <label for="formFile" class="form-label">syarat per isi</label>
-                            
-                        <div class="isi">
-                            <div class="row p-1">
-                                <ul class="list-group">
-                                    <li class="list-group-item">Dokumen yang memenuhi syarat</li>
-                                    </ul>
-                            <button type="button" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem         ;">
-                                View </button>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    </div>
+                @endforeach
             </div>
             </div>
         </div>

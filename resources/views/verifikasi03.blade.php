@@ -58,47 +58,42 @@
             </div>
             <div class="card">
             <div class="card-body">
-                <h5 id="card-title" class="text-center">NAMA AREA</h5>
+                <h5 id="card-title" class="text-center">{{$area}}</h5>
                 <div class="w-100 align-center">
                 <div class="mx-auto">
+                    @foreach ($details as $detail)
                     <div class="card" style="\margin-left: 0rem">
                     <div class="card-body">
                         <div class="mb-3">
-                            <label for="formFile" class="form-label">Nomor per isi</label>
-                            
+                            <label for="formFile" class="form-label">{{$detail->name}}</label>
+                            @php
+                                $verif = 0;
+                                $laporan = 0;
+                                if ($detail->laporan->count()) {
+                                $laporan = ($detail->laporan->count()*100)/$detail->laporan->count();
+                                    $verif = ($detail->laporanNotVerif->count()/$detail->laporan->count())*100;
+                                }
+                                $total = $laporan - $verif;
+                            @endphp
                         <div class="isi">
                             <div class="row p-1">
                             <div class="progress p-0">
-                                <div class="progress-bar btn-secondary" role="progressbar" style="width: 70%; margin-left: 0%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                <div class="progress-bar btn-secondary" role="progressbar" style="width: {{$total}}%; margin-left: 0%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{$total}}</div>
                             </div>
-                            <a href="{{route('verifikasi/area/detail/isi')}}" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem         ;">
+                            <a href="{{route('verifikasi/valid',['valid'=>$detail->id])}}" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem;">
                                 View Laporan </a>
                             </div>
                         </div>
                         </div>
                     </div>
                     </div>
-                    <div class="card" style="width: 60rem; margin-left: 0rem">
-                        <div class="card-body">
-                            <div class="mb-3">
-                                <label for="formFile" class="form-label">Nomor per isi</label>
-                                
-                            <div class="isi">
-                                <div class="row p-1">
-                                <div class="progress p-0">
-                                    <div class="progress-bar btn-secondary" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" >25%</div>
-                                </div>
-                                <button type="button" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem         ;">
-                                    View Laporan </button>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                        </div>
+                    @endforeach
                 </div>
                 </div>
             </div>
-            </div><br>
+            </div>
+            
+            <br>
             <button type="button" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem         ;">
                 <i class="bi bi-arrow-left-square-fill" style="margin: 5px;"></i>
                 Kembali </i></button>

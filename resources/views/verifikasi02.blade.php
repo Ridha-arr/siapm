@@ -1,3 +1,5 @@
+<?php use \App\Http\Controllers\verifikasi;
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,9 +59,11 @@
                 <button class="border-0 bg-transparent mt-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="bi-list" style="font-size: 1.5rem; color: #325135;"></i></button>
                 <h1 class="w-100">Verifikasi Data</h1>
             </div>
+            @foreach ($laporans as $laporan)
+        
             <div class="card">
                 <div class="card-body">
-                <h5 id="card-title" class="text-left">KETUA</h5>
+                <h5 id="card-title" class="text-left">{{$laporan->area}}</h5>
                 <div class="w-100 align-center">
                     <div class="mx-auto">
                         <div class="card" style=" margin-left: 0rem">
@@ -68,7 +72,7 @@
                                     <div class="isi">
                                         <div class="row p-1">
                                             <div class="progress ">
-                                                    <div class="progress-bar btn-secondary" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                                    <div class="progress-bar btn-secondary" role="progressbar" style="width: {{verifikasi::getArea($laporan->area)}}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{verifikasi::getArea($laporan->area)}}%</div>
                                             </div>
                                         </div>
                                         <br>
@@ -76,7 +80,7 @@
                                         Download <i class="bi bi-download" style="margin: 5px;"></i></button>
                                         <button type="button" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem         ;">
                                         Cetak <i class="bi bi-printer" style="margin: 5px;"></i></button>
-                                        <a href="{{route('verifikasi/area/detail')}}" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem         ;">
+                                        <a href="{{route('verifikasi/area/detail',['detail'=>$laporan->area])}}" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem         ;">
                                         View Laporan </a>
                                     </div>
                                 </div>
@@ -85,7 +89,8 @@
                     </div>
                 </div>
             </div>
-        </div>      
+        </div> 
+            @endforeach
     </div>           
     </main>
     </body>

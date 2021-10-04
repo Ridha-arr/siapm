@@ -58,43 +58,37 @@
         </div>
         <div class="card">
         <div class="card-body">
-            <h5 id="card-title" class="text-center">NOMOR PER ISI</h5>
+            <h5 id="card-title" class="text-center">{{$valids->name}}</h5>
             <div class="w-100 align-center">
             <div class="mx-auto">
+                @foreach ($valids->keterangan as $keterangan)
                 <div class="card" style="margin-left: 0rem">
                 <div class="card-body">
                     <div class="mb-3">
-                        <label for="formFile" class="form-label">Syarat per isi</label>
+                        <label for="formFile" class="form-label">{{$keterangan->name}}</label>
                         
                     <div class="isi">
                         <div class="row p-1">
                             <ul class="list-group">
-                                <li class="list-group-item">Pesan pemeriksaaan hasil Audit</li>
+                                <li class="list-group-item">{{isset($keterangan->laporan->komentar)?$keterangan->laporan->komentar:''}}</li>
                                 </ul>
                         </div><br>
+                        @if (isset($keterangan->laporan->verif))
+                        @if ($keterangan->laporan->verif)
                             <label for="formFile" class="form-label"><i class="bi bi-patch-check-fill"style="margin: 5px;"></i>Sudah Terkendali</label>
-                                    
-                    </div>
-                    </div>
-                </div>
-                </div>
-                <div class="card" style="margin-left: 0rem">
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <label for="formFile" class="form-label">syarat per isi</label>
-                            
-                        <div class="isi">
-                            <div class="row p-1">
-                                <ul class="list-group">
-                                    <li class="list-group-item">Pesan pemeriksaan hasil Audit</li>
-                                    </ul>
-                            </div><br>
+                        @else
                             <label for="formFile" class="form-label"><i class="bi bi-patch-exclamation-fill"style="margin: 5px;"></i>Belum Terkendali</label>
+                        @endif
+                            
+                        @endif
+                            
                                     
-                        </div>
-                        </div>
                     </div>
                     </div>
+                </div>
+                </div>
+                @endforeach
+
             </div>
             </div>
         </div>

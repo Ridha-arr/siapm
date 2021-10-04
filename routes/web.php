@@ -41,9 +41,13 @@ Route::middleware('auth')->group(function () {
     });
 });
 Route::get('/profil', [Profil::class, 'index'])->name('profil');
+Route::get('/monitoring', [Monitoring::class, 'index'])->name('monitoring');
+Route::get('/monitoring/detail', [Monitoring::class, 'detail'])->name('monitoring/detail');
 Route::get('/verifikasi', [verifikasi::class, 'index'])->name('verifikasi');
+Route::post('/verif', [verifikasi::class, 'verif'])->name('verif');
 Route::get('/verifikasi/area', [verifikasi::class, 'area'])->name('verifikasi/area');
-Route::get('/verifikasi/area/detail', [verifikasi::class, 'detail'])->name('verifikasi/area/detail');
-Route::get('/verifikasi/area/detail/isi', [verifikasi::class, 'isi'])->name('verifikasi/area/detail/isi');
-Route::get('/verifikasi/area/detail/isi/syarat', [verifikasi::class, 'syarat'])->name('verifikasi/area/detail/isi/syarat');
+Route::get('/verifikasi/area/{detail}', [verifikasi::class, 'detail'])->name('verifikasi/area/detail');
+Route::get('/verifikasi/valid/{valid}', [verifikasi::class, 'isi'])->name('verifikasi/valid');
+Route::get('/verifikasi/syarat/{id}', [verifikasi::class, 'syarat'])->name('verifikasi/syarat');
+Route::get('/verifikasi/hasil/{id}', [verifikasi::class, 'hasil'])->name('verifikasi/hasil');
 Route::get('/gantiprofil', [GantiProfil::class, 'index'])->name('gantiprofil');
