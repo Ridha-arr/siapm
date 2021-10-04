@@ -20,19 +20,19 @@
             <hr id="garis1">
             <ul class="nav nav-pills flex-column mb-auto">
                 <li class="nav-item">
-                    <a href="{{route('dashboard')}}" class="nav-link active" aria-current="page">
+                    <a href="{{route('dashboard')}}" class="nav-link {{ Route::currentRouteName() == 'dashboard' ? 'active' : '' }}" aria-current="page">
                         <i class="bi-grid-fill" style="font-size: 1.5rem; color: #325135"></i>
                         <h6 id="dashboard">Dashboard</h6>
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('profil')}}" class="nav-link text-white">
+                    <a href="{{route('profil')}}" class="nav-link text-white {{ Route::currentRouteName() == 'profil' ? 'active' : '' }}">
                         <i class="bi-person-fill" style="font-size: 1.5rem; color: #325135"></i>
                         <h6 id="profil">Profil</h6>
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('monitoring')}}" class="nav-link text-white">
+                    <a href="{{route('monitoring')}}" class="nav-link text-white {{ Route::currentRouteName() == 'monitoring' ? 'active' : '' }}">
                         <i class="bi-display-fill" style="font-size: 1.5rem; color: #325135"></i>
                         <h6 id="monitoring">Monitoring</h6>
                     </a>
@@ -46,13 +46,13 @@
             </li>
             <li>
             <!-->
-                <a href="{{ route('upload1') }}" class="nav-link text-white">
+                <a href="{{ route('upload1') }}" class="nav-link text-white {{ Route::currentRouteName() == 'upload1' ? 'active' : '' }}">
                     <i class="bi-file-arrow-up-fill" style="font-size: 1.5rem; color: #325135"></i>
                     <h6 id="upload">Upload Data</h6>
                 </a>
                 </li>
                 <li>
-                    <a href="{{route('verifikasi')}}" class="nav-link text-white">
+                    <a href="{{route('verifikasi')}}" class="nav-link text-white {{ Route::currentRouteName() == 'verifikasi' ? 'active' : '' }}">
                         <i class="bi-patch-check-fill" style="font-size: 1.5rem; color: #325135"></i>
                         <h6 id="verifikasi">Verifikasi Data</h6>
                     </a>
