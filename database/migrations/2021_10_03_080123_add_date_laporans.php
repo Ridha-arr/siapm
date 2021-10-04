@@ -14,7 +14,6 @@ class AddDateLaporans extends Migration
     public function up()
     {
         Schema::table('laporans', function (Blueprint $table) {
-            $table->date('date')->nullable();
         });
     }
 
