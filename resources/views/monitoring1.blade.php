@@ -8,10 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/stylep.css')}}" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
     <link href="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js">
-    <script type="text/javascript" src="chartjs/Chart.js"></script>
+    <script type="text/javascript" src= "{{asset('assets/js/Chart.js')}}"></script>
 
 
     <title>Sistem Informasi Akreditasi Penjaminan Mutu</title>
@@ -22,7 +22,7 @@
     <div class=" fixed-top">
       <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-gambar"> <img src="///d:/APM/FRONT END/Upload/Upload2/warna.png" alt="Logo" width="120" height="150" /> </a>
+          <a class="navbar-gambar"> <img src="{{ asset('assets/img/warna.png') }}" alt="Logo" width="120" height="150" /> </a>
           <div class="text-start ms-4">
             <h3>SISTEM INFORMASI AKREDITASI PENJAMINAN MUTU</h3>
             <br /> 
@@ -80,7 +80,7 @@
                                                   datasets: [
                                                       {
                                                           label: 'Laporan',
-                                                          data: [12, 19, 3],
+                                                          data: [{{$tersedia}}, {{$verif}}, {{$total}}],
                                                           backgroundColor: ['rgb(253, 215, 3)', 'rgb(27, 128, 1)', 'rgb(139, 5, 0)'],
                                                           borderWidth:2,
                                                           borderColor: ['rgb(253, 215, 3)',  'rgb(27, 128, 1)',  'rgb(139, 5, 0)'],
@@ -101,8 +101,8 @@
                                           });
                                       </script>
                                         <div class="mb-3 text-start">
-                                          <button type="button" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem         ;">
-                                            Lihat Detil </button>
+                                          <a href="{{route('monitoring/detail')}}" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem         ;">
+                                            Lihat Detil </a>
                                           <button type="button" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 2rem         ;">
                                             Download Laporan <i class="bi bi-download" style="margin: 5px;"></i></button>
                                         </div>

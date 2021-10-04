@@ -8,6 +8,7 @@ use App\Http\Controllers\GantiProfil;
 use App\Http\Controllers\Laporan;
 use App\Http\Controllers\Login;
 use App\Http\Controllers\LoginApi;
+use App\Http\Controllers\Monitoring;
 use App\Http\Controllers\verifikasi;
 use Illuminate\Support\Facades\Route;
 
