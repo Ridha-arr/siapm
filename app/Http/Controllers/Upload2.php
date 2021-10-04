@@ -30,6 +30,9 @@ class Upload2 extends Controller
         return back();
     }
     public function update(Request $request){
+        $request->validate([
+            'file' => 'mimes:pdf|max:10000'
+        ]);
         $laporan = Laporan::find($request->update);
         $file_path = storage_path('app/public/' . $request->file);
         if (File::exists($file_path)) File::delete($file_path);
