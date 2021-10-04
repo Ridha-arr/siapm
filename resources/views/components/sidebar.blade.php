@@ -20,7 +20,7 @@
             <hr id="garis1">
             <ul class="nav nav-pills flex-column mb-auto">
                 <li class="nav-item">
-                    <a href="#" class="nav-link active" aria-current="page">
+                    <a href="{{route('dashboard')}}" class="nav-link active" aria-current="page">
                         <i class="bi-grid-fill" style="font-size: 1.5rem; color: #325135"></i>
                         <h6 id="dashboard">Dashboard</h6>
                     </a>
@@ -32,7 +32,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="nav-link text-white">
+                    <a href="{{route('monitoring')}}" class="nav-link text-white">
                         <i class="bi-display-fill" style="font-size: 1.5rem; color: #325135"></i>
                         <h6 id="monitoring">Monitoring</h6>
                     </a>
