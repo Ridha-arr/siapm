@@ -22,7 +22,7 @@ class Monitoring extends Controller
     }
     public function detail(){
         return view('monitoring2',[
-            'valids'=>Valid::select('area')->groupBy('area')->get()
+            'valids'=>Valid::select('area')->groupBy('area')->orderBy('id','ASC')->get()
         ]);
     }
     public static function getDetail($area){
