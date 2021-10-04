@@ -100,7 +100,7 @@
                                     <div class="card-subtitle text-left">
                                         <h5 style="color: #325135; margin-top: 1rem; margin-bottom: 1rem; font-weight: 700;">{{strtoupper($valid->area)}}</h5>
                                         <div style="width: 700px;height: 400px">
-                                          <canvas id="{{$valid->area}}"></canvas>
+                                          <canvas id="{{$loop->iteration}}"></canvas>
                                       </div>
                                       @php
                                           $tersedia = Monitoring::getDetail($valid->area);
@@ -108,7 +108,7 @@
                                           $verif = Monitoring::getVerif($valid->area);
                                       @endphp
                                       <script>
-                                          chart('{{$valid->area}}',{{$tersedia}},{{$verif}},{{$total}})
+                                          chart('{{$loop->iteration}}',{{$tersedia}},{{$verif}},{{$total}})
                                       </script>
                                         <div class="mb-3 text-start">
                                           <a href="{{route('monitoring/view',['area'=>$valid->area])}}" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem         ;">
