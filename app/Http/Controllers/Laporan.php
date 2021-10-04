@@ -24,7 +24,7 @@ class Laporan extends Controller
       $area = Valid::whereHas('laporan',function ($query) use($year,$month){
         return $query->whereYear('date', '=', $year)
         ->whereMonth('date', '=', $month);
-      })->selectRaw(DB::raw('area,sum(ketentuan) AS ketentuan'))->withCount('laporan')->withCount([
+      })->select(DB::raw('area,SUM(ketentuan) AS ketentuan'))->withCount('laporan')->withCount([
       'laporan as verif' => function ($query) {
         $query->where('verif',1);
       }
