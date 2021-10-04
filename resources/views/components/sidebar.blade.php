@@ -10,7 +10,7 @@
                             class="rounded-circle me-2">
                     </div>
                     <div class="col-md-8">
-                        <span class="h6" id="nama-fs-4">Misbah, S.T, M.Eng.</span>
+                        <span class="h6" id="nama-fs-4">{{auth()->user()->name}}</span>
                         <span id="kategori" class="ms-0">{{ auth()->user()->level }}</span>
                     </div>
                 </div>
@@ -26,7 +26,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="nav-link text-white">
+                    <a href="{{route('profil')}}" class="nav-link text-white">
                         <i class="bi-person-fill" style="font-size: 1.5rem; color: #325135"></i>
                         <h6 id="profil">Profil</h6>
                     </a>

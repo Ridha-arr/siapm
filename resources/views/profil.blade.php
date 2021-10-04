@@ -75,19 +75,19 @@
                               <tbody>
                                 <tr>
                                   <th scope="row">Nama</th>
-                                  <td>Misbah, S.T., M.T.</td>
+                                  <td>{{auth()->user()->name}}</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">NIP</th>
-                                  <td>1984xxxxxxxxxx</td>
+                                  <td>{{auth()->user()->nip}}</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">Kategori</th>
-                                  <td>Admin</td>
+                                  <td>{{auth()->user()->level}}</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">Area</th>
-                                  <td>-</td>
+                                  <td>{{auth()->user()->area}}</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">Email</th>
@@ -100,10 +100,10 @@
                               </tbody>
                             </table>
                             <div class="mb-3 text-end">
-                                <button type="button" class="btn btn-secondary">
+                                <a href="{{route('gantiprofil')}}" class="btn btn-secondary">
                                   <i class="bi-pencil-fill" style="font-size: 1rem; color: #ffff"></i>
                                   Edit
-                                </button>
+                                </a>
                             </div>
                             </div>
                           </div>

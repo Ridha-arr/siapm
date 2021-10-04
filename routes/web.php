@@ -53,3 +53,4 @@ Route::get('/verifikasi/valid/{valid}', [verifikasi::class, 'isi'])->name('verif
 Route::get('/verifikasi/syarat/{id}', [verifikasi::class, 'syarat'])->name('verifikasi/syarat');
 Route::get('/verifikasi/hasil/{id}', [verifikasi::class, 'hasil'])->name('verifikasi/hasil');
 Route::get('/gantiprofil', [GantiProfil::class, 'index'])->name('gantiprofil');
+Route::post('/gantiprofil/update', [GantiProfil::class, 'update'])->name('profil/update');
