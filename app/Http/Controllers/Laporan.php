@@ -23,12 +23,12 @@ class Laporan extends Controller
   }
   public function getArea($year, $month)
   {
-    $area = Valid::select(DB::raw('area,SUM(ketentuan) AS ketentuan,id'))->withCount('laporan')->withCount([
+    $area = Valid::select(DB::raw('area,SUM(ketentuan) AS ketentuan'))->groupBy(['area'])->withCount('laporan')->withCount([
       'laporan as verif' => function ($query) use($year,$month) {
         $query->where('verif', 1)->whereYear('date', '=', $year)
         ->whereMonth('date', '=', $month);
       }
-    ])->groupBy(['area'])->orderBy('id', 'ASC')->get();
+    ])->orderBy('id', 'ASC')->get();
     return response()->json($area, 200);
   }
 
