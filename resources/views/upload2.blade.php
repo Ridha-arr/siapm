@@ -50,11 +50,11 @@
       
       <!--Sidebar-->
       <!--Box periode-->
-      <div class="mx-1" style="margin-left: 14rem !important;">
+      <div class="mx-1" style="margin-left: 14rem !important; margin-top: 13rem">
           <div class="container mt-4">
-            <div class=" ps-4">
-              <button class="border-0 bg-transparent mt-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="bi-list" style="font-size: 1.5rem; color: #325135;"></i></button>
-              <h1 class="w-100">Upload Data</h1>
+            <div class=" ps-5 mb-4">
+              <span class="w-50 h5 m-4" style="font-family: 'Poppins', sans-serif; font-weight: 400; color: #325135; margin-top: 1.5rem; margin-left: 1rem;">Upload Data</span>
+              <button class="border-0 bg-transparent mt-4 float-start" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" style="margin-left: -6rem !important"><i class="bi-list" style="font-size: 1.5rem; color: #325135; margin-left: 2rem !important"></i></button>
             </div>
             <div class="card">
                 <div class="card-body">
@@ -82,9 +82,9 @@
                                 <input accept="application/pdf" class="form-control" type="file" name="file" id="formFile" style="width: min-content;">
                               </div>
                               @if (isset($keterangan->laporan))
-                              <div class="col">
-                                <a href="{{asset('storage/'.str_replace("public/", "",$keterangan->laporan->dokumen))}}" class="btn btn-secondary" style="width: 15rem; margin-top: 2rem; width: max-content; margin-inline-start: auto;">Pilih Dokumen Lama</a>
-                              </div>
+                             
+                                <a href="{{asset('storage/'.str_replace("public/", "",$keterangan->laporan->dokumen))}}" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem;  width: max-content; margin-inline-start: auto;">Pilih Dokumen Lama</a>
+                             
                               @endif
                             @if (isset($keterangan->laporan))
                             <a href="{{asset('storage/'.str_replace("public/", "",$keterangan->laporan->dokumen))}}" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem;" target="_blank">

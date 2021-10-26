@@ -111,6 +111,96 @@
                         </div>
                     </div>
                 </div>
+                <br>
+                <div class="card">
+                  <div class="card-body">
+                    <div class="w-100 align-start">
+                      <div class="mx-auto">
+                        <h5 class="w-100" style="font-family: 'Poppins', sans-serif; font-weight: 700; color: #325135; margin-top: 1rem ">REKAPITULASI 3 BULAN TERAKHIR</h5>
+                <div style="width: 700px;height: 400px">
+                    <canvas id="myChart1"></canvas>
+                </div>
+                <script>
+                    var ctx = document.getElementById('myChart1').getContext('2d');
+                    var myChart = new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: ['Juli', 'Agustus', 'September'],
+                            datasets: [
+                                {
+                                    label: 'Laporan',
+                                    data: [12, 19, 3],
+                                    backgroundColor: ['rgb(253, 215, 3)', 'rgb(253, 215, 3)', 'rgb(253, 215, 3)'],
+                                    borderWidth:2,
+                                    borderColor: ['rgb(253, 215, 3)', 'rgb(253, 215, 3)', 'rgb(253, 215, 3)'],
+                                },{
+                                    label: 'Upload',
+                                    data: [4, 10, 10],
+                                    backgroundColor: ['rgb(27, 128, 1)', 'rgb(27, 128, 1)', 'rgb(27, 128, 1)'],
+                                    borderWidth:2,
+                                    borderColor: ['rgb(27, 128, 1)', 'rgb(27, 128, 1)', 'rgb(27, 128, 1)'],
+                                },{
+                                    label: 'Belum Upload',
+                                    data: [11, 5, 7],
+                                    backgroundColor: ['rgb(139, 5, 0)', 'rgb(139, 5, 0)', 'rgb(139, 5, 0)'],
+                                    borderWidth:2,
+                                    borderColor: ['rgb(139, 5, 0)', 'rgb(139, 5, 0)', 'rgb(139, 5, 0)'],
+                                }
+                            ],                       
+                        },
+                        options:{
+                            scales: {
+                                yAxes: [
+                                    {  
+                                        ticks: {
+                                            beginAtZero: true,
+                                        },
+                                    },
+                                ],
+                            },
+                        },
+                    });
+                </script>
+                <div class="isi" style="margin-top:-2rem">
+                    <div class="row p-2">
+                        <div class="col-3">
+                            <div class="card shadow p-3 mb-5" style="width: max-content; height: 8rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="font-family: 'Poppins', sans-serif; font-weight: 500; color: #325135;">Jumlah Laporan</h5>
+                                    <br>
+                                    <br>
+                                    <h6 class="card-subtitle mb-2 text-muted" style="font-family: 'Poppins', sans-serif; font-weight: 500; color: #0000; ">34 </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card shadow p-3 mb-5" style="width: max-content; height: 8rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="font-family: 'Poppins', sans-serif; font-weight: 500; color: #325135;">Jumlah Upload</h5>
+                                    <br>
+                                    <br>
+                                    <h6 class="card-subtitle mb-2 text-muted" style="font-family: 'Poppins', sans-serif; font-weight: 500; color: #0000; ">24 </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card shadow p-3 mb-5 " style="width: max-content; height: 8rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="font-family: 'Poppins', sans-serif; font-weight: 500; color: #325135;">Jumlah Belum 
+                                        <br> Upload</h5>
+                                        <br>
+            
+                                    <h6 class="card-subtitle mb-2 text-muted" style="font-family: 'Poppins', sans-serif; font-weight: 500; color: #0000;">23 </h6>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
       <!--Akhir Box Periode-->
       </main>
       <!--Akhir dari isi-->

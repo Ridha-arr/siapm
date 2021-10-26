@@ -55,80 +55,8 @@
                 <span class="w-50 h5 m-4" style="font-family: 'Poppins', sans-serif; font-weight: 400; color: #325135; margin-top: 1.5rem; margin-left: 1rem;">Dashboard</span>
                 <button class="border-0 bg-transparent mt-4 float-start" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" style="margin-left: -6rem !important"><i class="bi-list" style="font-size: 1.5rem; color: #325135;"></i></button>
             </div>
-                <br>
-                <h3 class="w-100" style="font-family: 'Poppins', sans-serif; font-weight: 500; color: #325135; ">Rekapitulasi 3 Bulan Terakhir</h3>
-                <div style="width: 700px;height: 400px">
-                    <canvas id="myChart"></canvas>
-                </div>
-                <script>
-                    var ctx = document.getElementById('myChart').getContext('2d');
-                    var myChart = new Chart(ctx, {
-                        type: 'bar',
-                        data: {
-                            labels: ['Juli', 'Agustus', 'September'],
-                            datasets: [
-                                {
-                                    label: 'Laporan',
-                                    data: [12, 19, 3],
-                                    backgroundColor: ['rgb(253, 215, 3)', 'rgb(253, 215, 3)', 'rgb(253, 215, 3)'],
-                                    borderWidth:2,
-                                    borderColor: ['rgb(253, 215, 3)', 'rgb(253, 215, 3)', 'rgb(253, 215, 3)'],
-                                },{
-                                    label: 'Upload',
-                                    data: [4, 10, 10],
-                                    backgroundColor: ['rgb(27, 128, 1)', 'rgb(27, 128, 1)', 'rgb(27, 128, 1)'],
-                                    borderWidth:2,
-                                    borderColor: ['rgb(27, 128, 1)', 'rgb(27, 128, 1)', 'rgb(27, 128, 1)'],
-                                },{
-                                    label: 'Belum Upload',
-                                    data: [11, 5, 7],
-                                    backgroundColor: ['rgb(139, 5, 0)', 'rgb(139, 5, 0)', 'rgb(139, 5, 0)'],
-                                    borderWidth:2,
-                                    borderColor: ['rgb(139, 5, 0)', 'rgb(139, 5, 0)', 'rgb(139, 5, 0)'],
-                                }
-                            ],                       
-                        },
-                        options:{
-                            scales: {
-                                yAxes: [
-                                    {  
-                                        ticks: {
-                                            beginAtZero: true,
-                                        },
-                                    },
-                                ],
-                            },
-                        },
-                    });
-                </script>
-                <div class="isi" style="margin-top:-2rem">
-                    <div class="row p-2">
-                        <div class="col-3">
-                            <div class="card shadow p-3 mb-5" style="width: 13rem; height: 8rem;">
-                                <div class="card-body">
-                                    <h5 class="card-title" style="font-family: 'Poppins', sans-serif; font-weight: 500; color: #325135;">Jumlah Laporan</h5>
-                                    <h6 class="card-subtitle mb-2 text-muted" style="font-family: 'Poppins', sans-serif; font-weight: 500; color: #0000; margin-top: 1rem;">34 </h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="card shadow p-3 mb-5" style="width: 13rem; height: 8rem;">
-                                <div class="card-body">
-                                    <h5 class="card-title" style="font-family: 'Poppins', sans-serif; font-weight: 500; color: #325135;">Jumlah Upload</h5>
-                                    <h6 class="card-subtitle mb-2 text-muted" style="font-family: 'Poppins', sans-serif; font-weight: 500; color: #0000; margin-top: 1rem;">24 </h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="card shadow p-3 mb-5 " style="width: 13rem; height: 8rem;">
-                                <div class="card-body">
-                                    <h5 class="card-title" style="font-family: 'Poppins', sans-serif; font-weight: 500; color: #325135;">Jumlah Belum Upload</h5>
-                                    <h6 class="card-subtitle mb-2 text-muted" style="font-family: 'Poppins', sans-serif; font-weight: 500; color: #0000; margin-top: 1rem ;">23 </h6>
-                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
+                
                 <div class="isi">
                     <div class="row p-2">
                         <div class="col-5">
@@ -160,9 +88,9 @@
                     </div>
                 </div>
                 <div class="isi">
-                    <div class="row p-2">
-                        <div class="col-5">
-                            <div class="card" style="width: 60rem; height: 10rem; background-color: #325135; border: #325135; margin-top: 2rem;">
+                  
+                      
+                            <div class="card" style="width: 100%; height: 10rem; background-color: #325135; border: #325135; margin-top: 2rem;">
                                 <div class="card-body">
                                     <h5 class="card-title" style="font-family: 'Poppins', sans-serif; font-weight: 600; color: #ffff; margin-top: 1rem; margin-inline-start: 2rem;">BUKU PETUNJUK</h5>
                                     <p class="card-text" style="font-family: 'Poppins', sans-serif; font-weight: 400; color: #ffff; margin-top: 1rem ; margin-inline-start: 2rem;">Petunjuk Teknis Sistem Informasi Akreditasi Penjaminan Mutu
@@ -177,8 +105,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        
+                    
                 </div>
                 <div class="isi">
                     <div class="row p-2">
@@ -234,9 +162,9 @@
                     </div>
                 </div> 
                 <div class="isi">
-                    <div class="row p-2">
-                        <div class="col-5">
-                            <div class="card" style="width: 60rem; height: 10rem; background-color: #325135; border: #325135; margin-top: 2rem;">
+                   
+                      
+                            <div class="card" style="width: 100%; height: 10rem; background-color: #325135; border: #325135; margin-top: 2rem;">
                                 <div class="card-body">
                                     <h5 class="card-title" style="font-family: 'Poppins', sans-serif; font-weight: 600; color: #ffff; margin-top: 1rem; margin-inline-start: 2rem;">DASAR HUKUM</h5>
                                     <p class="card-text" style="font-family: 'Poppins', sans-serif; font-weight: 400; color: #ffff; margin-top: 1rem ; margin-inline-start: 2rem;">Sistem Informasi APM telah diluncurkan berdasarkan Surat Keptusan (SK) No.  
@@ -249,8 +177,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                   
+                   
                 </div>
                 <div class="isi">
                     <div class="row p-2">

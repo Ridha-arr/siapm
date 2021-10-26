@@ -84,6 +84,7 @@
                                                       <a href="{{asset('storage/'.str_replace("public/", "",$keterangan->laporan->dokumen))}}" class="btn btn-secondary" style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem         ;">
                                                         View Laporan </a>  
                                                       @endif
+            
                                 
                                                     </div>
                                                      
