@@ -69,7 +69,7 @@
                 <hr id="garis2">
               
             <li>
-              <a href="#" class="nav-link text-white">
+              <a href="{{route('notifikasi')}}" class="nav-link text-white">
                 <i class="bi-bell-fill" style="font-size: 1.5rem; color: #325135"></i>
                 <h6 id="notifikasi">Notifikasi</h6>
               </a>

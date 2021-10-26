@@ -26,7 +26,7 @@ class Monitoring extends Controller
         ]);
     }
     public static function getDetail($area){
-        $detail = Laporan::whereHas('valid',function($valid) use($area){
+        $detail = Laporan::whereHas('user',function($valid) use($area){
             $valid->where('area',$area);
         })->get()->count();
         return $detail;
@@ -38,7 +38,7 @@ class Monitoring extends Controller
     }
     public static function getVerif($area)
     {
-        $detail = Laporan::whereHas('valid', function ($valid) use ($area) {
+        $detail = Laporan::whereHas('user', function ($valid) use ($area) {
             $valid->where('area', $area);
         })->where('verif',1)->get()->count();
         return $detail;
@@ -47,6 +47,7 @@ class Monitoring extends Controller
     {
         return view('monitoring3',[
             'details' => Valid::where('area', $area)->get(),
+            'area' => $area
         ]);
     }
 }

@@ -59,9 +59,14 @@
         <div class="mx-1" style="margin-left: 14rem !important; margin-top:13rem">
             <div class="container mt-4">
                 <div class=" ps-5 mb-4">
-                    <span class="w-50 h5 m-4" style="font-family: 'Poppins', sans-serif; font-weight: 400; color: #325135; margin-top: 1.5rem; margin-left: 1rem;">Verifikasi Data</span>
-                    <button class="border-0 bg-transparent mt-4 float-start" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" style="margin-left: -6rem !important"><i class="bi-list" style="font-size: 1.5rem; color: #325135; margin-left : 2rem !important"></i></button>
-                  </div>
+                    <span class="w-50 h5 m-4"
+                        style="font-family: 'Poppins', sans-serif; font-weight: 400; color: #325135; margin-top: 1.5rem; margin-left: 1rem;">Verifikasi
+                        Data</span>
+                    <button class="border-0 bg-transparent mt-4 float-start" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"
+                        style="margin-left: -6rem !important"><i class="bi-list"
+                            style="font-size: 1.5rem; color: #325135; margin-left : 2rem !important"></i></button>
+                </div>
                 <form action="{{ route('verif') }}" method="post">
                     @csrf
                     <input type="hidden" value="{{ $keterangan->laporan->id }}" name="laporan_id">
@@ -70,67 +75,61 @@
                         <div class="card-body">
                             <h5 id="card-title" class="text-center">{{ $keterangan->name }}</h5>
                             <div class="w-100 align-center">
-                                <div class="mx-auto">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="mb-3">
-                                                <label for="formFile" class="form-label"></label>
-                                                <div class="isi">
-                                                    <div class="row p-1">
-                                                        <ul class="list-group">
-                                                            <label for="formFile" class="form-label">Catatan</label>
-                                                            <textarea name="komentar"
-                                                                class="form-control">{{ $keterangan->laporan->komentar }}</textarea>
-                                                        </ul>
-                                                        @if (isset($keterangan->laporan->dokumen))
-                                                            <a href="{{ asset('storage/' . str_replace('public/', '', $keterangan->laporan->dokumen)) }}"
-                                                                class="btn btn-secondary"
-                                                                style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem;"
-                                                                target="_blank">
-                                                                Lihat Dokumen </a>
-                                                        @endif
-                                                    </div>
-                                                </div>
+                                <div class="card">
+                                    <div class="card-body py-3">
+                                        <div class="mb-3">
+                                            <label for="formFile" class="form-label"></label>
+                                            @if (isset($keterangan->laporan->dokumen))
+                                                <a href="{{ asset('storage/' . str_replace('public/', '', $keterangan->laporan->dokumen)) }}"
+                                                    class="btn btn-secondary" target="_blank">
+                                                    Lihat Dokumen </a>
+                                            @endif
+                                            <div class="mt-2">
+                                                <label for="formFile" class="form-label">Catatan</label>
+                                                <textarea name="komentar"
+                                                    class="form-control">{{ $keterangan->laporan->komentar }}</textarea>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="text-center">
-                                <div class="form-group">
-                                    <label for="terkendali">Terkendali</label>
-                                    <input type="radio" id="terkendali" name="terkendali" value="1" required>
-                                    <label for="tidak">Tidak Terkendali</label>
-                                    <input type="radio" id="tidak" name="terkendali" value="0" required>
-                                </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="form-group">
+                                <label for="terkendali">Terkendali</label>
+                                <input type="radio" id="terkendali" name="terkendali" value="1" required>
+                                <label for="tidak">Tidak Terkendali</label>
+                                <input type="radio" id="tidak" name="terkendali" value="0" required>
                             </div>
                         </div>
-                        @if (\Session::has('success'))
-                                <div class="alert alert-success">
-                                    <ul>
-                                        <li>{!! \Session::get('success') !!}</li>
-                                    </ul>
-                                </div>
-                            @endif
-                        <div class="text-end">
-                            
-                            <a href="{{route('verifikasi/valid',['valid'=>$keterangan->valid_id])}}" class="btn btn-secondary"
-                                style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem         ;">
-                                <i class="bi bi-arrow-left-square-fill" style="margin: 5px;"></i>
-                                Kembali </i></a>
-
-                            <button type="submit" class="btn btn-secondary"
-                                style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem         ;">
-                                Kirim  </i></button>
-                        </div>
                     </div>
-                </form>
-                <br>
+                    @if (\Session::has('success'))
+                        <div class="alert alert-success">
+                            <ul>
+                                <li>{!! \Session::get('success') !!}</li>
+                            </ul>
+                        </div>
+                    @endif
+                    <div class="text-end">
+
+                        <a href="{{ route('verifikasi/valid', ['valid' => $keterangan->valid_id]) }}"
+                            class="btn btn-secondary"
+                            style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem         ;">
+                            <i class="bi bi-arrow-left-square-fill" style="margin: 5px;"></i>
+                            Kembali </i></a>
+
+                        <button type="submit" class="btn btn-secondary"
+                            style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem         ;">
+                            Kirim </i></button>
+                    </div>
+            </div>
+            </form>
+            <br>
 
 
-                <!--Akhir Box Periode-->
+            <!--Akhir Box Periode-->
 
-                <!--batasan-->
+            <!--batasan-->
     </main>
     <!--Akhir dari isi-->
 </body>

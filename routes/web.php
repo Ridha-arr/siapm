@@ -9,6 +9,7 @@ use App\Http\Controllers\Laporan;
 use App\Http\Controllers\Login;
 use App\Http\Controllers\LoginApi;
 use App\Http\Controllers\Monitoring;
+use App\Http\Controllers\Notifikasi;
 use App\Http\Controllers\verifikasi;
 use Illuminate\Support\Facades\Route;
 
@@ -42,6 +43,7 @@ Route::middleware('auth')->group(function () {
     });
 });
 Route::get('/profil', [Profil::class, 'index'])->name('profil');
+Route::get('/notifikasi', [Notifikasi::class, 'index'])->name('notifikasi');
 Route::get('/monitoring', [Monitoring::class, 'index'])->name('monitoring');
 Route::get('/monitoring/detail', [Monitoring::class, 'detail'])->name('monitoring/detail');
 Route::get('/monitoring/view/{area}', [Monitoring::class, 'view'])->name('monitoring/view');

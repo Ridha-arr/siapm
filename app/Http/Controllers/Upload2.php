@@ -9,27 +9,31 @@ use Illuminate\Support\Facades\File;
 
 class Upload2 extends Controller
 {
-    public function index(Request $request){
+    public function index(Request $request)
+    {
         $area = $request->area;
         $bulan = $request->bulan;
-        $laporans = Valid::with('keterangan')->where('area',$area)->get();
-        return view("upload2",[
-            'laporans'=> $laporans
+        $laporans = Valid::with('keterangan')->where('area', $area)->get();
+        return view("upload2", [
+            'laporans' => $laporans
         ]);
     }
-    public function postUpload(Request $request){
-        $fileName = $request->file->store('public/pengadilan_negri/'.date('Y').'/'.date('m').'/'.auth()->user()->area.'/'.$request->tipe);
+    public function postUpload(Request $request)
+    {
+        $fileName = $request->file->store('public/pengadilan_negri/' . date('Y') . '/' . date('m') . '/' . auth()->user()->area . '/' . $request->tipe);
         $oriName = $request->file->getClientOriginalName();
         Laporan::create([
-            'user_id'=>auth()->user()->id,
-            'dokumen'=>$fileName,
-            'name'=>$oriName,
-            'verif'=>0,
-            'keterangan_id'=>$request->keterangan
+            'user_id' => auth()->user()->id,
+            'dokumen' => $fileName,
+            'name' => $oriName,
+            'verif' => 0,
+            'keterangan_id' => $request->keterangan
         ]);
+        session()->flash('message', 'Berhasil Diupload');
         return back();
     }
-    public function update(Request $request){
+    public function update(Request $request)
+    {
         $request->validate([
             'file' => 'mimes:pdf|max:100000'
         ]);
@@ -41,6 +45,7 @@ class Upload2 extends Controller
         $laporan->dokumen = $fileName;
         $laporan->name = $oriName;
         $laporan->save();
+        session()->flash('message'. $request->update, 'Berhasil Diupload');
         return back();
     }
 }
