@@ -46,7 +46,7 @@ class Upload2 extends Controller
         $laporan->dokumen = $fileName;
         $laporan->name = $oriName;
         $laporan->save();
-        session()->flash($request->index, 'Berhasil Diupload');
+        session()->flash($request->index.$request->iteration, 'Berhasil Diupload');
         return back();
     }
 }
