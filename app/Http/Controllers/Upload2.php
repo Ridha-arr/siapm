@@ -20,6 +20,7 @@ class Upload2 extends Controller
     }
     public function postUpload(Request $request)
     {
+
         $fileName = $request->file->store('public/pengadilan_negri/' . date('Y') . '/' . date('m') . '/' . auth()->user()->area . '/' . $request->tipe);
         $oriName = $request->file->getClientOriginalName();
         Laporan::create([
@@ -29,7 +30,7 @@ class Upload2 extends Controller
             'verif' => 0,
             'keterangan_id' => $request->keterangan
         ]);
-        session()->flash('message', 'Berhasil Diupload');
+        session()->flash('message'.$request->index, 'Berhasil Diupload');
         return back();
     }
     public function update(Request $request)
@@ -45,7 +46,7 @@ class Upload2 extends Controller
         $laporan->dokumen = $fileName;
         $laporan->name = $oriName;
         $laporan->save();
-        session()->flash('message'. $request->update, 'Berhasil Diupload');
+        session()->flash('message'.$request->index, 'Berhasil Diupload');
         return back();
     }
 }

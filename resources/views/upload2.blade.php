@@ -87,6 +87,7 @@
                                                                         method="post" enctype="multipart/form-data">
                                                             @endif
                                                             @csrf
+                                                            <input type="hidden" value="{{$loop->iteration}}" name="index">
                                                             <input type="hidden" value="{{ $laporan->id }}"
                                                                 name="tipe">
                                                             <input type="hidden" value="{{ $keterangan->id }}"
@@ -127,10 +128,10 @@
                                                         </form>
                                                         <div class="w-100">
                                                           @if (isset($keterangan->laporan))
-                                                            @if (session()->has('message'.$keterangan->laporan->id))
+                                                            @if (session()->has('message'.$loop->iteration))
                                                                 <div
                                                                     class="alert bg-success text-white float-end p-2">
-                                                                    {{ session('message'.$keterangan->laporan->id) }}
+                                                                    {{ session('message'.$loop->iteration) }}
                                                                 </div>
                                                             @endif
                                                             @endif
