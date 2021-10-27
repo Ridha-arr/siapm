@@ -30,7 +30,7 @@ class Upload2 extends Controller
             'verif' => 0,
             'keterangan_id' => $request->keterangan
         ]);
-        session()->flash('message'.$request->index, 'Berhasil Diupload');
+        session()->flash($request->index . $request->iteration, 'Berhasil Diupload');
         return back();
     }
     public function update(Request $request)
