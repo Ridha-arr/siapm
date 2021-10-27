@@ -73,6 +73,7 @@
                             <h5 id="card-title" class="text-left mt-2">{{ $laporan->name }}</h5>
                             <div class="w-100 align-center">
                                 <div class="mx-auto">
+                               
                                     @if (isset($laporan->keterangan))
                                         @foreach ($laporan->keterangan as $keterangan)
                                             <div class="card mb-4" style="margin-left: 0rem">
@@ -87,7 +88,7 @@
                                                                         method="post" enctype="multipart/form-data">
                                                             @endif
                                                             @csrf
-                                                            <input type="hidden" value="{{$loop->iteration}}" name="index">
+                                                            <input type="hidden" value="{{$keterangan->name}}" name="index">
                                                             <input type="hidden" value="{{ $laporan->id }}"
                                                                 name="tipe">
                                                             <input type="hidden" value="{{ $keterangan->id }}"
@@ -127,13 +128,11 @@
                                                         @endif
                                                         </form>
                                                         <div class="w-100">
-                                                          @if (isset($keterangan->laporan))
-                                                            @if (session()->has('message'.$loop->iteration))
+                                                            @if (session()->has($keterangan->name))
                                                                 <div
                                                                     class="alert bg-success text-white float-end p-2">
-                                                                    {{ session('message'.$loop->iteration) }}
+                                                                    {{ session($keterangan->name) }}
                                                                 </div>
-                                                            @endif
                                                             @endif
                                                         </div>
                                                     </div>
