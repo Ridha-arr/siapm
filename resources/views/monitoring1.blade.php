@@ -136,7 +136,7 @@
                                     <canvas id="myChart1"></canvas>
                                 </div>
                                 <div>
-                                    <button class="btn btn-secondary my-4" onclick="saveAsPDF()">Download Grafik</button>
+                                    <button class="btn btn-secondary my-4 mb-5 ms-2" onclick="saveAsPDF()">Download Grafik</button>
                                 </div>
                                 <script>
                                     function saveAsPDF() {
