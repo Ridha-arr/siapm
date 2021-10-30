@@ -39,27 +39,32 @@
                     </a>
                 </li>
                 
-            <li>
+            
               <a href="#" class="nav-link text-white">
                 <i class="bi-table" style="font-size: 1.5rem; color: #325135"></i>
                 <h6 id="data-LKE">Data LKE</h6>
               </a>
             </li>
-            <li>
-           
+            
+            
+          <li>
                 <a href="{{ route('upload1') }}" class="nav-link text-white {{ Route::currentRouteName() == 'upload1' ? 'active' : '' }}">
                     <i class="bi-file-arrow-up-fill" style="font-size: 1.5rem; color: #325135"></i>
                     <h6 id="upload">Upload Data</h6>
                 </a>
                 </li>
-                <li>
+                
+                
+            
+                
                     <a href="{{route('verifikasi')}}" class="nav-link text-white {{ Route::currentRouteName() == 'verifikasi' ? 'active' : '' }}">
                         <i class="bi-patch-check-fill" style="font-size: 1.5rem; color: #325135"></i>
                         <h6 id="verifikasi">Verifikasi Data</h6>
                     </a>
                 </li>
                 
-            <li>
+                
+            
               <a href="#" class="nav-link text-white">
                 <i class="bi-file-check-fill" style="font-size: 1.5rem; color: #325135"></i>
                 <h6 id="audit">Audit</h6>
@@ -80,6 +85,7 @@
                 <h6 id="cms">CMS</h6>
               </a>
             </li>
+            
             
                 <li>
                     <a href="{{ route('logout') }}" class="nav-link text-white">

@@ -91,7 +91,7 @@
                                 </tr>
                                 <tr>
                                   <th scope="row">Email</th>
-                                  <td>masadmin@gmail.com</td>
+                                  <td>{{auth()->user()->email}}</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">Status</th>
