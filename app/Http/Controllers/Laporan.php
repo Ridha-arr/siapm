@@ -49,7 +49,7 @@ class Laporan extends Controller
         $query->whereYear('date', '=', $year)
           ->whereMonth('date', '=', $month);
       }
-    ])->orderBy('id', 'ASC')->get();
+    ])->with('laporan')->orderBy('id', 'ASC')->get();
     return response()->json($task, 200);
   }
   public function getLaporan($id, $year, $month)
