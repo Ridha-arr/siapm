@@ -15,12 +15,15 @@ class GantiProfil extends Controller
     public function update(Request $request){
         $user = User::find(auth()->user()->id);
         $user->name = $request->name;
-        if ($request->level) {
-            $user->level = $request->level;
+        if (auth()->user()->level == 'admin') {
+            if ($request->level) {
+                $user->level = $request->level;
+            }
+            $user->area = $request->area;
+            $user->status = $request->status;
+            $user->email = $request->nip;
         }
-        $user->area = $request->area;
         $user->email = $request->email;
-        $user->status=$request->status;
         $user->save();
         return redirect()->route('profil');
     }

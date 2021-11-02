@@ -68,8 +68,9 @@
                                 <div class="card-title text-center" style="font-weight: 600; color: #325135; font-size: large; font-family: 'Poppins', sans-serif; margin-bottom: 3rem;">
                                  Edit Profil
                                 </div>
-                                <form action="{{route('profil/update')}}" method="post">
+                                <form action="{{route('update-akun')}}" method="post">
                                   @csrf
+                                  <input type="hidden" name="id" value="{{$user->id}}">
                                     <div class="mb-3">
                                         <label for="exampleInputText" class="form-label" style="font-weight: 600; font-family: 'Poppins', sans-serif;">Nama</label>
                                         <input type="text" class="form-control" id="exampleInputText" name="name" value="{{$user->name}}">

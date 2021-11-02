@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Cms;
 use App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Upload1;
 use App\Http\Controllers\Upload2;
@@ -43,6 +44,11 @@ Route::middleware('auth')->group(function () {
     });
 });
 Route::get('/profil', [Profil::class, 'index'])->name('profil');
+Route::post('/tambah', [Cms::class, 'tambah'])->name( 'tambah-akun');
+Route::get('/cms', [Cms::class, 'index'])->name('cms');
+Route::post('/update-akun', [Cms::class, 'update'])->name('update-akun');
+Route::get('/edit-profile/{id}', [Cms::class, 'edit'])->name('edit-profile');
+Route::get('/delete-akun/{id}', [Cms::class, 'delete'])->name('delete-akun');
 Route::get('/notifikasi', [Notifikasi::class, 'index'])->name('notifikasi');
 Route::get('/monitoring', [Monitoring::class, 'index'])->name('monitoring');
 Route::get('/monitoring/detail', [Monitoring::class, 'detail'])->name('monitoring/detail');
