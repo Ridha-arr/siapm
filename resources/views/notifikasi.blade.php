@@ -82,7 +82,7 @@
 
                                             <div class="card-body rounded-2"
                                                 style="color: #325135; font-family: 'Poppins', sans-serif; font-weight: 400">
-                                                <span>{{ $valid->area }}</span>
+                                                <span>{{strtoupper($valid->area)}}</span>
                                                 <form action="{{ route('upload2') }}" method="get">
 
                                                     <a href="{{ route('verifikasi/area/detail', ['detail' => $valid->area]) }}"

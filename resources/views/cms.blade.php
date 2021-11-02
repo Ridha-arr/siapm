@@ -60,7 +60,7 @@
             <div class="container mt-4">
                 <div class=" ps-5 mb-4">
                     <span class="w-50 h5 m-4"
-                        style="font-family: 'Poppins', sans-serif; font-weight: 400; color: #325135; margin-top: 1.5rem; margin-left: 1rem;">Cms</span>
+                        style="font-family: 'Poppins', sans-serif; font-weight: 400; color: #325135; margin-top: 1.5rem; margin-left: 1rem;">CMS</span>
                     <button class="border-0 bg-transparent mt-4 float-start" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"
                         style="margin-left: -6rem !important"><i class="bi-list"
