@@ -75,38 +75,42 @@
                                         <input type="text" class="form-control" id="exampleInputText" name="name" value="{{$user->name}}">
                                     </div>
                                     <div class="mb-3">
+                                      <label for="exampleInputText" class="form-label" style="font-weight: 600; font-family: 'Poppins', sans-serif;">NIP</label>
+                                      <input type="text" class="form-control" id="exampleInputText" nip="nip" value="{{$user->nip}}">
+                                  </div>
+                                    <div class="mb-3">
                                         <label for="exampleInputText" class="form-label" style="font-weight: 600; font-family: 'Poppins', sans-serif;">Kategori</label>
                                         <div class="form-check">
                                             <input value="pimpinan" {{$user->level=='pimpinan'?'checked':''}} class="form-check-input" type="radio" name="level" id="level1">
                                             <label class="form-check-label" for="level1" style="font-weight: 400; font-family: 'Poppins', sans-serif;">
-                                              Admin
+                                              Pimpinan
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <input value="petugas" {{$user->level=='petugas'?'checked':''}} class="form-check-input" type="radio" name="level" id="level1">
                                             <label class="form-check-label" for="level1" style="font-weight: 400; font-family: 'Poppins', sans-serif;">
-                                              Petugas
+                                              Verifikator
                                         </div>
                                         <div class="form-check">
                                             <input value="verifikator" {{$user->level=='verifikator'?'checked':''}} class="form-check-input" type="radio" name="level" id="level1">
                                             <label class="form-check-label" for="level1" style="font-weight: 400; font-family: 'Poppins', sans-serif;">
-                                              Verifikator
+                                              Operator
                                             </label>
                                         </div>
                                         
-                                        <!--<div class="form-check">
+                                        <div class="form-check">
                                             <input value="auditor" {{$user->level=='audit'?'checked':''}} class="form-check-input" type="radio" name="level" id="level1">
                                             <label class="form-check-label" for="level1" style="font-weight: 400; font-family: 'Poppins', sans-serif;">
-                                              Auditor Internal
+                                              Koordinator Auditor Internal
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <input value="koordinator" {{$user->level=='koordinator'?'checked':''}} class="form-check-input" type="radio" name="level" id="level1">
                                             <label class="form-check-label" for="level1" style="font-weight: 400; font-family: 'Poppins', sans-serif;">
-                                              Koordinator Auditor Internal
+                                              Auditor Internal
                                             </label>
                                         </div>
-                                        <!-->
+                                        
                                     </div>
                                     <div class="mb-3">
                                         <label for="inputSelection" class="form-label" style="font-weight: 600; font-family: 'Poppins', sans-serif;">Area</label>

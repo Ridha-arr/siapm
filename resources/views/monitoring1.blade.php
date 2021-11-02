@@ -73,62 +73,6 @@
                     <div class="card-body">
                         <div class="w-100 align-start">
                             <div class="mx-auto">
-
-                                <div class="mb-3 w-100 row mx-auto">
-                                    <div class="card-subtitle text-left">
-                                        <h5
-                                            style="color: #325135; margin-top: 1rem; margin-bottom: 1rem; font-weight: 700;">
-                                            LAPORAN DATA APM</h5>
-                                        <h5 style="color: #325135; margin-bottom: 1rem;">PENGADILAN NEGERI BANDA ACEH
-                                        </h5>
-                                        <div style="width: 700px;height: 400px">
-                                            <canvas id="myChart"></canvas>
-                                        </div>
-                                        <script>
-                                            var ctx = document.getElementById('myChart').getContext('2d');
-                                            var myChart = new Chart(ctx, {
-                                                type: 'bar',
-                                                data: {
-                                                    labels: ['Tersedia', 'Verifikasi', 'Tidak Tersedia'],
-                                                    datasets: [{
-                                                        label: 'Laporan',
-                                                        data: [{{ $tersedia }}, {{ $verif }}, {{ $total }}],
-                                                        backgroundColor: ['rgb(253, 215, 3)', 'rgb(27, 128, 1)', 'rgb(139, 5, 0)'],
-                                                        borderWidth: 2,
-                                                        borderColor: ['rgb(253, 215, 3)', 'rgb(27, 128, 1)', 'rgb(139, 5, 0)'],
-                                                    }, ],
-                                                },
-                                                options: {
-                                                    scales: {
-                                                        yAxes: [{
-                                                            ticks: {
-                                                                beginAtZero: true,
-                                                            },
-                                                        }, ],
-                                                    },
-                                                },
-                                            });
-                                        </script>
-                                        <div class="mb-3 text-start">
-                                            <a href="{{ route('monitoring/detail') }}" class="btn btn-secondary"
-                                                style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem         ;">
-                                                Lihat Detil </a>
-                                            <button type="button" class="btn btn-secondary"
-                                                style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 2rem         ;">
-                                                Download Laporan <i class="bi bi-download"
-                                                    style="margin: 5px;"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="card">
-                    <div class="card-body">
-                        <div class="w-100 align-start">
-                            <div class="mx-auto">
                                 <h5 class="w-100"
                                     style="font-family: 'Poppins', sans-serif; font-weight: 700; color: #325135; margin-top: 1rem ">
                                     REKAPITULASI 3 BULAN TERAKHIR</h5>
@@ -188,7 +132,62 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="w-100 align-start">
+                            <div class="mx-auto">
 
+                                <div class="mb-3 w-100 row mx-auto">
+                                    <div class="card-subtitle text-left">
+                                        <h5
+                                            style="color: #325135; margin-top: 1rem; margin-bottom: 1rem; font-weight: 700;">
+                                            LAPORAN DATA APM</h5>
+                                        <h5 style="color: #325135; margin-bottom: 1rem;">PENGADILAN NEGERI BANDA ACEH
+                                        </h5>
+                                        <div style="width: 700px;height: 400px">
+                                            <canvas id="myChart"></canvas>
+                                        </div>
+                                        <script>
+                                            var ctx = document.getElementById('myChart').getContext('2d');
+                                            var myChart = new Chart(ctx, {
+                                                type: 'bar',
+                                                data: {
+                                                    labels: ['Tersedia', 'Verifikasi', 'Tidak Tersedia'],
+                                                    datasets: [{
+                                                        label: 'Laporan',
+                                                        data: [{{ $tersedia }}, {{ $verif }}, {{ $total }}],
+                                                        backgroundColor: ['rgb(253, 215, 3)', 'rgb(27, 128, 1)', 'rgb(139, 5, 0)'],
+                                                        borderWidth: 2,
+                                                        borderColor: ['rgb(253, 215, 3)', 'rgb(27, 128, 1)', 'rgb(139, 5, 0)'],
+                                                    }, ],
+                                                },
+                                                options: {
+                                                    scales: {
+                                                        yAxes: [{
+                                                            ticks: {
+                                                                beginAtZero: true,
+                                                            },
+                                                        }, ],
+                                                    },
+                                                },
+                                            });
+                                        </script>
+                                        <div class="mb-3 text-start">
+                                            <a href="{{ route('monitoring/detail') }}" class="btn btn-secondary"
+                                                style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 0.3rem         ;">
+                                                Lihat Detil </a>
+                                            <button type="button" class="btn btn-secondary"
+                                                style="width: 15rem; margin-top: 1rem; width: max-content; margin-left: 2rem         ;">
+                                                Download Laporan <i class="bi bi-download"
+                                                    style="margin: 5px;"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!--Akhir Box Periode-->
     </main>
