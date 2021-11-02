@@ -50,7 +50,7 @@
                 </a>
                 </li>
 
-                @if (in_array(auth()->user()->level,['admin','operator']))
+                @if (in_array(auth()->user()->level,['admin','operator','pimpinan']))
                     
                 <li>
                     <a href="{{ route('upload1') }}"
@@ -60,7 +60,7 @@
                     </a>
                 </li>
                 @endif
-                @if (in_array(auth()->user()->level,['admin','verifikator']))
+                @if (in_array(auth()->user()->level,['admin','verifikator','pimpinan']))
                 <li>
                 <a href="{{ route('verifikasi') }}"
                     class="nav-link text-white {{ Route::currentRouteName() == 'verifikasi' ? 'active' : '' }}">
