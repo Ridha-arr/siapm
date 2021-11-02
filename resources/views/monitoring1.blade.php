@@ -185,55 +185,6 @@
                                         },
                                     });
                                 </script>
-                                <div class="isi" style="margin-top:-2rem">
-                                    <div class="row p-2">
-                                        <div class="col-3">
-                                            <div class="card shadow p-3 mb-5" style="width: max-content; height: 8rem;">
-                                                <div class="card-body">
-                                                    <h5 class="card-title"
-                                                        style="font-family: 'Poppins', sans-serif; font-weight: 500; color: #325135;">
-                                                        Jumlah Laporan</h5>
-                                                    <br>
-                                                    <br>
-                                                    <h6 class="card-subtitle mb-2 text-muted"
-                                                        style="font-family: 'Poppins', sans-serif; font-weight: 500; color: #0000; ">
-                                                        34 </h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-3">
-                                            <div class="card shadow p-3 mb-5" style="width: max-content; height: 8rem;">
-                                                <div class="card-body">
-                                                    <h5 class="card-title"
-                                                        style="font-family: 'Poppins', sans-serif; font-weight: 500; color: #325135;">
-                                                        Jumlah Upload</h5>
-                                                    <br>
-                                                    <br>
-                                                    <h6 class="card-subtitle mb-2 text-muted"
-                                                        style="font-family: 'Poppins', sans-serif; font-weight: 500; color: #0000; ">
-                                                        24 </h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-3">
-                                            <div class="card shadow p-3 mb-5 "
-                                                style="width: max-content; height: 8rem;">
-                                                <div class="card-body">
-                                                    <h5 class="card-title"
-                                                        style="font-family: 'Poppins', sans-serif; font-weight: 500; color: #325135;">
-                                                        Jumlah Belum
-                                                        <br> Upload
-                                                    </h5>
-                                                    <br>
-
-                                                    <h6 class="card-subtitle mb-2 text-muted"
-                                                        style="font-family: 'Poppins', sans-serif; font-weight: 500; color: #0000;">
-                                                        23 </h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
