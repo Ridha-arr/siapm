@@ -52,6 +52,12 @@ class Laporan extends Controller
     ])->orderBy('id', 'ASC')->get();
     return response()->json($task, 200);
   }
+  public function getLaporan($id, $year, $month)
+  {
+    $task = ModelsLaporan::where('keterangan_id', $id)->whereYear('date', '=', $year)
+      ->whereMonth('date', '=', $month)->get();
+    return response()->json($task, 200);
+  }
   public function uploadLaporan(Request $request)
   {
     $validator = $request->validate([
