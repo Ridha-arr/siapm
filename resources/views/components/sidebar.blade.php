@@ -6,7 +6,7 @@
             <div class="header-profil">
                 <div class="row">
                     <div class="col-md-3">
-                        <img src="{{ asset('assets/img/img.jpeg') }}" alt="" width="50" height="55"
+                        <img src="{{ asset('assets/img/user.png') }}" alt="" width="50" height="55"
                             class="rounded-circle me-2">
                     </div>
                     <div class="col-md-8">
